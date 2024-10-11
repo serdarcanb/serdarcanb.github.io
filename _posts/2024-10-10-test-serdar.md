@@ -24,7 +24,7 @@ toc: true
 toc_label: test
 toc_icon: "cog"
 image: https://serdarcanb.github.io/assets/images/test.png
-seo_title: Stock Exchange Architecture
+seo_title: test
 
 ---
 
