@@ -5,7 +5,7 @@ modified: 2024-10-01
 excerpt: "<br>"
 author: Serdarcan Buyukdereli
 title: Open Source Tools
-permalink: /open-source-tools/
+permalink: /tools/
 author_profile: true
 comments: true
 ---
