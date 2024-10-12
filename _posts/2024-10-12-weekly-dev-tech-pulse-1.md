@@ -197,21 +197,21 @@ seo_description: Stay updated with Weekly Dev Tech Pulse, your go-to source for 
 
 
 <a href="mailto:serdarcanbuyukdereli@gmail.com">
-    <img src="https://serdarcanb.github.io/assets/images/logos/mail.png" alt="Email" width="16" height="16" style="vertical-align: middle;"/> Email
+    <img src="https://serdarcanb.github.io/assets/images/logos/mail.png" alt="Email" width="32" height="32" style="vertical-align: middle;"/> Email
 </a> | 
 <a href="https://serdarcanb.github.io">
-    <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" width="16" height="16" style="vertical-align: middle;"/> Website
+    <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" width="32" height="32" style="vertical-align: middle;"/> Website
 </a> | 
 <a href="https://dly.to/9NjW8sHeGHR">
-    <img src="https://serdarcanb.github.io/assets/images/logos/Dailydev.png" alt="Daily Dev" width="16" height="16" style="vertical-align: middle;"/> Daily Dev
+    <img src="https://serdarcanb.github.io/assets/images/logos/Dailydev.png" alt="Daily Dev" width="32" height="32" style="vertical-align: middle;"/> Daily Dev
 </a> | 
 <a href="https://github.com/serdarcanb">
-    <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" width="16" height="16" style="vertical-align: middle;"/> GitHub
+    <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" width="32" height="32" style="vertical-align: middle;"/> GitHub
 </a> | 
 <a href="https://linkedin.com/in/serdarcanbuyukdereli/">
-    <img src="https://serdarcanb.github.io/assets/images/logos/linkedin.svg" alt="LinkedIn" width="16" height="16" style="vertical-align: middle;"/> LinkedIn
+    <img src="https://serdarcanb.github.io/assets/images/logos/linkedin.svg" alt="LinkedIn" width="32" height="32" style="vertical-align: middle;"/> LinkedIn
 </a> | 
 <a href="https://medium.com/@serdarcanbuyukdereli">
-    <img src="https://serdarcanb.github.io/assets/images/logos/medium.svg" alt="Medium" width="16" height="16" style="vertical-align: middle;"/> Medium
+    <img src="https://serdarcanb.github.io/assets/images/logos/medium.svg" alt="Medium" width="32" height="32" style="vertical-align: middle;"/> Medium
 </a>
 
