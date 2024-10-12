@@ -36,15 +36,6 @@ Click the categories below to filter tools by type:
 
 ### Software Tools
 
-| Name                                        | Description                                           |
-| ------------------------------------------- | ----------------------------------------------------- |
-| [Post with Header Image][header-image-post] | A post with a large header image. |
-| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
-| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
-| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
-| [Sample Collection Page][sample-collection] | Single page from a collection. |
-| [Categories Archive][categories-archive] | Posts grouped by category. |
-| [Tags Archive][tags-archive] | Posts grouped by tags. |
 
 | Name                                                                | ⭐ Stars                                                                    | Free/Paid | Description                                                                                   | Tags                                                               |
 |:------------------------------------------------------------------- |:---------------------------------------------------------------------------:|----------:|:--------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
@@ -55,14 +46,15 @@ Click the categories below to filter tools by type:
 | [twentyhq/twenty](https://github.com/twentyhq/twenty) | ![Github Stars](https://img.shields.io/github/stars/twentyhq/twenty) | Free  | Building a modern alternative to Salesforce, powered by the community. | `open-source` `business-management` `team-collaboration` `productivity` |
 
 ### Tools
-| Name | Description | Tags |
-|:------:|:-------------:|:------:|
+| Name                      | Description                                                                                                                | Tags    
+                                      |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------|:------------------------------------:|
 | [Miro](https://miro.com/) | Miro, formerly known as RealtimeBoard, is a digital collaboration platform designed to facilitate remote and distributed team communication and project management. | `Data` `Analytics` `Draw`|
 | [focusbrew](https://www.focusbrew.dev/) | Elevate your productivity with FocusBrew, the ultimate Chrome extension for focused work sessions. | `extension` `pomodoro` `Free` |
 
 ### Article
-| Name | 
-|:------:|
+| Name                                                                                                                                           | 
+|:-----------------------------------------------------------------------------------------------------------------------------------------------|
 | [Kafka 101: A Beginner’s Guide to Understanding Kafka](https://towardsdev.com/kafka-101-a-beginners-guide-to-understanding-kafka-2cd797864614) | 
 | [OpenTelemetry Collector: everything a developer needs to know](https://www.cncf.io/blog/2024/10/07/opentelemetry-collector-everything-a-developer-needs-to-know/) | 
 | [Design Spotify - System Design Interview](https://blog.algomaster.io/p/design-spotify-system-design-interview) | 
