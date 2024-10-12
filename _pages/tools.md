@@ -7,10 +7,15 @@ excerpt: "<br>"
 author: Serdarcan Buyukdereli
 title: Open Source Tools
 permalink: /tools/
-author_profile: false
+author_profile: true
 comments: true
 classes: wide
-
+header:
+   overlay_color: "#5e616c"
+   overlay_image: https://serdarcanb.github.io/assets/images/OpenSource.png
+   overlay_filter: .8
+   teaser: https://serdarcanb.github.io/assets/images/OpenSource.png
+image: https://serdarcanb.github.io/assets/images/OpenSource.png
 ---
 
 🌍 **Open Source Tools** - Discover the best open-source projects and tools from around the world!
