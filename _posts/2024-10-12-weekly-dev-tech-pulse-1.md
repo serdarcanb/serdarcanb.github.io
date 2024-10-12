@@ -4,7 +4,7 @@ tags:
 modified: 2024-10-12
 excerpt: "<br>"
 author: Serdarcan Buyukdereli
-title: Weekly Dev Tech Pulse-1 
+title: Weekly Dev Tech Pulse#1 
 author_profile: true
 comments: true
 categories:
@@ -25,7 +25,7 @@ pinned: false
 toc: true
 toc_label: Weekly Dev Tech Pulse
 toc_icon: "cog"
-image: https://serdarcanb.github.io/assets/images/System-Architecture-Design.png
+image: https://serdarcanb.github.io/assets/images/weekly-dev-tech-pulse.png
 seo_title: Weekly Dev Tech Pulse
 seo_description: Stay updated with Weekly Dev Tech Pulse, your go-to source for the latest developer tools, tech articles, and open-source repos. Discover fresh insights and stay ahead in the world of software development.
 
