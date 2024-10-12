@@ -4,7 +4,7 @@ tags:
 modified: 2024-10-12
 excerpt: "<br>"
 author: Serdarcan Buyukdereli
-title: Weekly Dev Tech Pulse#1
+title: Weekly Dev Tech Pulse-1 
 author_profile: true
 comments: true
 categories:
