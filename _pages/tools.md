@@ -8,8 +8,10 @@ title: Open Source Tools
 permalink: /tools/
 author_profile: true
 comments: true
+custom_css:
+  - /assets/css/custom.css
+  
 ---
-# Open Source Tools
 
 🌍 **Open Source Tools** - Discover the best open-source projects and tools from around the world!
 
