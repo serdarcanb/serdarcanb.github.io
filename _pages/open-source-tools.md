@@ -1,3 +1,9 @@
+---
+permalink: /open-source-tools/
+title: "Open Source Tools"
+last_modified_at: 2024-10-12T11:59:26-04:00
+toc: true
+---
 # Open Source Tools
 
 🌍 **Open Source Tools** - Discover the best open-source projects and tools from around the world!
