@@ -13,7 +13,7 @@ header:
    overlay_color: "#5e616c"
    overlay_image: https://serdarcanb.github.io/assets/images/System-Architecture-Design.png
    overlay_filter: .8
-   teaser: https://serdarcanb.github.io/assets/images/System-Architecture-Desing.png
+   teaser: https://serdarcanb.github.io/assets/images/System-Architecture-Design.png
 tags:
 - Architecture
 - DevOps
