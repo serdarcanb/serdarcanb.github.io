@@ -1,15 +1,15 @@
 ---
 layout: single
 tags:
+- tools
 modified: 2024-10-01
 excerpt: "<br>"
 author: Serdarcan Buyukdereli
 title: Open Source Tools
 permalink: /tools/
-author_profile: true
+author_profile: false
 comments: true
-custom_css:
-  - /assets/css/custom.css
+classes: wide
 
 ---
 
