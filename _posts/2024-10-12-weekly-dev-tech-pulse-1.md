@@ -22,7 +22,7 @@ tags:
 excerpt: Every great journey begins with a small step. In the world of technology, the key to success is in trying and continuously learning. Once you take that first step, the possibilities ahead are limitless.
 
 pinned: false
-toc: true
+toc: false
 toc_label: Weekly Dev Tech Pulse
 toc_icon: "cog"
 image: https://serdarcanb.github.io/assets/images/weekly-dev-tech-pulse.png
