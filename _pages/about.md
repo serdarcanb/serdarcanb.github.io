@@ -39,4 +39,3 @@ Feel free to connect with me to discuss DevOps, cloud technologies, or any new o
 - **Medium:** [Serdarcan Büyükdereli](https://medium.com/@serdarcanbuyukdereli)
 - **LinkedIn:** [Serdarcan Büyükdereli](https://linkedin.com/in/serdarcanbuyukdereli/)
 - **Daily Dev:** [Serdarcan Büyükdereli](https://dly.to/pK9N9ZBBwrP)
----
