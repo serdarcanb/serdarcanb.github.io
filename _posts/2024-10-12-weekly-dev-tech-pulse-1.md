@@ -163,7 +163,7 @@ seo_description: Stay updated with Weekly Dev Tech Pulse, your go-to source for 
 <div style="display: flex; align-items: center; border: 2px solid dark; border-radius: 15px; padding: 10px; background-color: #6c9dff; color: white; margin-bottom: 20px;">
     <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=2048,quality=80,onerror=redirect,format=auto/wp-content/uploads/2024/09/cover-17270987451362.jpeg" alt="Design System" style="width: 150px; height: auto; margin-right: 20px; border-radius: 10px;">
     <div>
-        <h2 style="margin: 0; font-size: 20px;">OpenTelemetry Collector: everything a developer needs to know</h2>
+        <h2 style="margin: 0; font-size: 20px;">How to Measure Design System at Scale</h2>
         <p style="margin: 0; display: inline; font-style: italic:">By Vietanh Nguyen, Alankar Gupta, Sagar Pant</p>
         <p style="margin: 0;">It provides an in-depth look at how Uber is building and improving its scalable design system, and examines ways to ensure consistency and efficiency in modern product development processes.</p>
         <p><a href="https://www.uber.com/en-TR/blog/design-system-at-scale/?uclick_id=4db44676-1e60-43aa-bc42-31592352028b" style="color: lightgreen;">Read the full article</a></p>
