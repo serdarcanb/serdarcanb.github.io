@@ -10,7 +10,7 @@ author_profile: true
 comments: true
 custom_css:
   - /assets/css/custom.css
-  
+
 ---
 
 🌍 **Open Source Tools** - Discover the best open-source projects and tools from around the world!
@@ -36,7 +36,7 @@ Click the categories below to filter tools by type:
 
 ### Software Tools
 | Name | ⭐ Stars | Free/Paid | Description | Tags  |
-|------|---------|-------------|------|-----------|
+|:------:|:---------:|:-------------:|:------:|:-----------:|
 | [hcengineering/platform](https://github.com/hcengineering/platform) | ![Github Stars](https://img.shields.io/github/stars/hcengineering/platform) | Free  | Huly — All-in-One Project Management Platform (alternative to Linear, Jira, Slack, Notion, Motion) | `self-hosted` `open-source` `alternative` `application-management` |
 | [CasaOS](https://github.com/IceWhaleTech/CasaOS) | ![Github Stars](https://img.shields.io/github/stars/IceWhaleTech/CasaOS) | Free  | CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system. | `personal-cloud` `open-source` `self-hosted` `file-storage` |
 | [formbricks](https://github.com/formbricks/formbricks) | ![Github Stars](https://img.shields.io/github/stars/formbricks/formbricks) | Free  | Open Source Survey Platform.| `open-source` `form-builder` `survey-builder` `form-analytics` `self-hosted` |
@@ -45,13 +45,13 @@ Click the categories below to filter tools by type:
 
 ### Tools
 | Name | Description | Tags |
-|------|-------------|------|
+|:------:|:-------------:|:------:|
 | [Miro](https://miro.com/) | Miro, formerly known as RealtimeBoard, is a digital collaboration platform designed to facilitate remote and distributed team communication and project management. | `Data` `Analytics` `Draw`|
 | [focusbrew](https://www.focusbrew.dev/) | Elevate your productivity with FocusBrew, the ultimate Chrome extension for focused work sessions. | `extension` `pomodoro` `Free` |
 
 ### Article
 | Name | 
-|------|
+|:------:|
 | [Kafka 101: A Beginner’s Guide to Understanding Kafka](https://towardsdev.com/kafka-101-a-beginners-guide-to-understanding-kafka-2cd797864614) | 
 | [OpenTelemetry Collector: everything a developer needs to know](https://www.cncf.io/blog/2024/10/07/opentelemetry-collector-everything-a-developer-needs-to-know/) | 
 | [Design Spotify - System Design Interview](https://blog.algomaster.io/p/design-spotify-system-design-interview) | 
@@ -67,3 +67,4 @@ This repository thrives on community contributions. You can share your open-sour
 This page is designed to support the open-source community. Discover new tools and help us grow by contributing!
 
 ---
+
