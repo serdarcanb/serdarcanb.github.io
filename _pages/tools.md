@@ -35,10 +35,21 @@ Click the categories below to filter tools by type:
 ## 🌟 Featured Projects
 
 ### Software Tools
-| Name | ⭐ Stars | Free/Paid | Description | Tags  |
-|:------:|:---------:|:-------------:|:------:|:-----------:|
+
+| Name                                        | Description                                           |
+| ------------------------------------------- | ----------------------------------------------------- |
+| [Post with Header Image][header-image-post] | A post with a large header image. |
+| [HTML Tags and Formatting Post][html-tags-post] | A variety of common markup showing how the theme styles them. |
+| [Syntax Highlighting Post][syntax-post] | Post displaying highlighted code. |
+| [Post with a Gallery][gallery-post] | A post showing several images wrapped in `<figure>` elements. |
+| [Sample Collection Page][sample-collection] | Single page from a collection. |
+| [Categories Archive][categories-archive] | Posts grouped by category. |
+| [Tags Archive][tags-archive] | Posts grouped by tags. |
+
+| Name                                                                | ⭐ Stars                                                                    | Free/Paid | Description                                                                                   | Tags                                                               |
+|:------------------------------------------------------------------- |:---------------------------------------------------------------------------:|----------:|:--------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
 | [hcengineering/platform](https://github.com/hcengineering/platform) | ![Github Stars](https://img.shields.io/github/stars/hcengineering/platform) | Free  | Huly — All-in-One Project Management Platform (alternative to Linear, Jira, Slack, Notion, Motion) | `self-hosted` `open-source` `alternative` `application-management` |
-| [CasaOS](https://github.com/IceWhaleTech/CasaOS) | ![Github Stars](https://img.shields.io/github/stars/IceWhaleTech/CasaOS) | Free  | CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system. | `personal-cloud` `open-source` `self-hosted` `file-storage` |
+| [CasaOS](https://github.com/IceWhaleTech/CasaOS) | ![Github Stars](https://img.shields.io/github/stars/IceWhaleTech/CasaOS) | Free  | CasaOS - A simple, easy-to-use, elegant open-source Personal Cloud system. | `personal-cloud` `open-source` `self-hosted` `file-storage`           |
 | [formbricks](https://github.com/formbricks/formbricks) | ![Github Stars](https://img.shields.io/github/stars/formbricks/formbricks) | Free  | Open Source Survey Platform.| `open-source` `form-builder` `survey-builder` `form-analytics` `self-hosted` |
 | [nextcloud/server](https://github.com/nextcloud/server) | ![Github Stars](https://img.shields.io/github/stars/nextcloud/server) | Free  | ☁️ Nextcloud server, a safe home for all your data. | `open-source` `cloud-storage` `file-sharing` `data-security` `self-hosted` |
 | [twentyhq/twenty](https://github.com/twentyhq/twenty) | ![Github Stars](https://img.shields.io/github/stars/twentyhq/twenty) | Free  | Building a modern alternative to Salesforce, powered by the community. | `open-source` `business-management` `team-collaboration` `productivity` |
