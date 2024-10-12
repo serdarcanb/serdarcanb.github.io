@@ -1,8 +1,13 @@
 ---
+layout: single
+tags:
+modified: 2024-10-01
+excerpt: "<br>"
+author: Serdarcan Buyukdereli
+title: Open Source Tools
 permalink: /open-source-tools/
-title: "Open Source Tools"
-last_modified_at: 2024-10-12T11:59:26-04:00
-toc: true
+author_profile: true
+comments: true
 ---
 # Open Source Tools
 
