@@ -1,6 +1,6 @@
 ---
 layout: single
-tags:
+classes: wide
 modified: 2024-10-12
 excerpt: "<br>"
 author: Serdarcan Buyukdereli
