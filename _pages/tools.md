@@ -46,12 +46,14 @@ Click the categories below to filter tools by type:
 | [twentyhq/twenty](https://github.com/twentyhq/twenty) | ![Github Stars](https://img.shields.io/github/stars/twentyhq/twenty) | Free  | Building a modern alternative to Salesforce, powered by the community. | `open-source` `business-management` `team-collaboration` `productivity` |
 
 ### Tools
+
 | Name                      | Description                                                                                                                                                         | Tags                     |
 |:------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:------------------------ |
 | [Miro](https://miro.com/) | Miro, formerly known as RealtimeBoard, is a digital collaboration platform designed to facilitate remote and distributed team communication and project management. | `Data` `Analytics` `Draw`|
 | [focusbrew](https://www.focusbrew.dev/) | Elevate your productivity with FocusBrew, the ultimate Chrome extension for focused work sessions. | `extension` `pomodoro` `Free` |
 
 ### Article
+
 | Name                                                                                                                                           | 
 |:---------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Kafka 101: A Beginner’s Guide to Understanding Kafka](https://towardsdev.com/kafka-101-a-beginners-guide-to-understanding-kafka-2cd797864614) | 
