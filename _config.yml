@@ -140,6 +140,9 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/serdarcanbuyukdereli/"
+    - label: "Daily Dev"
+      icon: "fab fa-fw fa-link"
+      url: "https://dly.to/pK9N9ZBBwrP"
 
 # Site Footer
 footer:
@@ -162,7 +165,9 @@ footer:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/serdarcanbuyukdereli/"
-
+    - label: "Daily Dev"
+      icon: "fab fa-fw fa-link"
+      url: "https://dly.to/pK9N9ZBBwrP"
 
 # Reading Files
 include:
