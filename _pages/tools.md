@@ -55,7 +55,7 @@ Click the categories below to filter tools by type:
 
 ### Article
 | Name                                                                                                                                           | 
-|:-----------------------------------------------------------------------------------------------------------------------------------------------|
+|:---------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Kafka 101: A Beginner’s Guide to Understanding Kafka](https://towardsdev.com/kafka-101-a-beginners-guide-to-understanding-kafka-2cd797864614) | 
 | [OpenTelemetry Collector: everything a developer needs to know](https://www.cncf.io/blog/2024/10/07/opentelemetry-collector-everything-a-developer-needs-to-know/) | 
 | [Design Spotify - System Design Interview](https://blog.algomaster.io/p/design-spotify-system-design-interview) | 
