@@ -62,13 +62,4 @@ Click the categories below to filter tools by type:
 | [How to Measure Design System at Scale](https://www.uber.com/en-TR/blog/design-system-at-scale/?uclick_id=4db44676-1e60-43aa-bc42-31592352028b) | 
 
 
-## 📢 Contribute
-
-This repository thrives on community contributions. You can share your open-source projects or suggest new tools. Feel free to open a **pull request** or create an **issue** to contribute.
-
----
-
-This page is designed to support the open-source community. Discover new tools and help us grow by contributing!
-
----
 
