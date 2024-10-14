@@ -334,8 +334,6 @@ defaults:
       comments:  true
       share: true
       related: true
-      sidebar:
-        nav: "posts"      
   - scope:
       path: ""
       type: pages
