@@ -10,6 +10,7 @@ permalink: /app/
   <div class="grid-container">
     {% for item in site.software %}
       <div class="grid-item">
+        <img src="{{ item.logo }}" alt="{{ item.title }} logo" class="project-logo"/>
         <h3>{{ item.title }}</h3>
         <p>{{ item.description }}</p>
         <p>Etiketler: {% for tag in item.tags %} <span>{{ tag }}</span> {% endfor %}</p>

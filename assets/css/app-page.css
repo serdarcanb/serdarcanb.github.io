@@ -22,3 +22,10 @@
   padding: 3px 6px;
   margin-right: 5px;
 }
+
+.project-logo {
+  max-width: 100px; /* Logonun maksimum genişliği */
+  max-height: 100px; /* Logonun maksimum yüksekliği */
+  display: block;
+  margin: 0 auto 10px auto; /* Logoyu ortala ve altına boşluk bırak */
+}
