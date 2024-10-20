@@ -345,3 +345,5 @@ collections:
   posts:
     output: true
     permalink: /:collection/:path/
+  software:
+    output: true
