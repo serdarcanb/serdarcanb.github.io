@@ -1,7 +1,7 @@
 .app-page .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Her satırda 3 eleman olacak */
-  gap: 20px; /* Elemanlar arasında boşluk bırakır */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ekrana göre 3 öğeyi ayarla */
+  gap: 20px;
   margin: 20px;
 }
 
@@ -9,7 +9,7 @@
   background: #333; /* Arka plan rengi */
   color: #fff; /* Yazı rengi */
   padding: 20px; /* İç boşluk */
-  border-radius: 8px; /* Kenarları yuvarlatır */
+  border-radius: 8px; /* Köşeleri yuvarlatır */
 }
 
 .app-page .grid-item h3 {

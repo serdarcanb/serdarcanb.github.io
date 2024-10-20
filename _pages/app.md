@@ -3,6 +3,9 @@ layout: default
 title: App
 permalink: /app/
 ---
+<head>
+  <link rel="stylesheet" href="{{ '/assets/css/app-page.css' | relative_url }}">
+</head>
 <div class="app-page">
   <div class="grid-container">
     {% for item in site.software %}
