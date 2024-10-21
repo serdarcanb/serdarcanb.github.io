@@ -50,9 +50,15 @@ permalink: /app/
     allItems.forEach(function(item) {
       if (item !== element) {
         item.classList.remove('active');
+        item.style.height = '';  // Reset the height of other items
       }
     });
     element.classList.toggle('active');
+    if (element.classList.contains('active')) {
+      element.style.height = 'auto';  // Let the height grow with content
+    } else {
+      element.style.height = '';  // Return to default height
+    }
   }
 
   document.addEventListener("DOMContentLoaded", function() {
