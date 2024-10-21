@@ -1,15 +1,16 @@
 .app-page .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ekrana göre 3 öğeyi ayarla */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   margin: 20px;
 }
 
 .app-page .grid-item {
-  background: #333; /* Arka plan rengi */
-  color: #fff; /* Yazı rengi */
-  padding: 20px; /* İç boşluk */
-  border-radius: 8px; /* Köşeleri yuvarlatır */
+  background: #7b7171;
+  color: #aff;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .app-page .grid-item h3 {
@@ -24,8 +25,18 @@
 }
 
 .project-logo {
-  max-width: 100px; /* Logonun maksimum genişliği */
-  max-height: 100px; /* Logonun maksimum yüksekliği */
+  max-width: 100px;
+  max-height: 100px;
   display: block;
-  margin: 0 auto 10px auto; /* Logoyu ortala ve altına boşluk bırak */
+  margin: 0 auto 10px auto;
+}
+
+/* Detayları varsayılan olarak gizle */
+.app-page .grid-item .details {
+  display: none;
+}
+
+/* Grid öğesi 'active' sınıfına sahip olduğunda detayları göster */
+.app-page .grid-item.active .details {
+  display: block;
 }
