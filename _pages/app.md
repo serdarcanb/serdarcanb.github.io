@@ -74,28 +74,28 @@ permalink: /app/
     };
     var fuse = new Fuse(appData, fuseOptions);
 
-    function searchApps(event) {
-      var input = document.getElementById('searchInput').value;
-      if (input) {
-        var results = fuse.search(input);
-        var resultElements = results.map(function(result) {
-          return result.item.element;
-        });
-        appElements.forEach(function(el) {
-          el.style.display = 'none';
-        });
-        resultElements.forEach(function(el) {
-          el.style.display = '';
-        });
-      } else {
-        appElements.forEach(function(el) {
-          el.style.display = '';
-        });
-      }
-      // Eğer Enter tuşuna basıldıysa varsayılan form submit işlemini engelle
-      if (event && event.keyCode === 13) {
-        event.preventDefault();
-      }
+  function searchApps(event) {
+    var input = document.getElementById('searchInput').value;
+    if (input) {
+      var results = fuse.search(input);
+      var resultElements = results.map(function(result) {
+        return result.item.element;
+      });
+      appElements.forEach(function(el) {
+        el.style.display = 'none';
+      });
+      resultElements.forEach(function(el) {
+        el.style.display = '';
+      });
+    } else {
+      appElements.forEach(function(el) {
+        el.style.display = '';
+      });
     }
+    // Eğer Enter tuşuna basıldıysa varsayılan form submit işlemini engelle
+    if (event && event.keyCode === 13) {
+      event.preventDefault();
+    }
+  }
   });
 </script>
