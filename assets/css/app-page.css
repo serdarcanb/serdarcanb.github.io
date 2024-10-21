@@ -1,3 +1,5 @@
+/* app-page.css */
+
 .app-page .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -39,4 +41,13 @@
 /* Grid öğesi 'active' sınıfına sahip olduğunda detayları göster */
 .app-page .grid-item.active .details {
   display: block;
+}
+
+/* Arama kutusunun stili */
+#searchInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
