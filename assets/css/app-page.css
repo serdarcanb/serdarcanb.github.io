@@ -8,16 +8,16 @@ body {
 /* Grid container ayarları */
 .app-page .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px); /* Her bir öğe 300px genişliğinde olacak */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(min-content, max-content);
   gap: 20px;
-  justify-content: center; /* Öğeleri yatayda ortala */
+  justify-content: center;
   margin: 20px;
+  align-items: start;
 }
 
 /* Grid item stili */
 .app-page .grid-item {
-  width: 300px; /* Sabit genişlik */
-  /* İsteğe bağlı olarak sabit yükseklik ekleyebilirsiniz */
   background: #fff;
   color: #333;
   padding: 20px;
@@ -26,106 +26,62 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   display: flex;
-  flex-direction: column; /* İçerikleri dikeyde hizalamak için */
+  flex-direction: column;
 }
 
-/* İçeriklerin taşmasını önlemek ve düzgün hizalamak için */
-.app-page .grid-item p {
-  flex-grow: 1;
-  overflow: hidden;
-}
-
-.app-page .grid-item .details {
-  flex-shrink: 0;
-}
-
-/* Detayların varsayılan olarak gizlenmesi */
-.app-page .grid-item .details {
-  display: none;
-  margin-top: 15px;
-}
-
-/* Aktif öğede detayların gösterilmesi */
-.app-page .grid-item.active .details {
-  display: block;
-}
-
-/* Logo stili */
-.project-logo {
-  max-width: 80px;
-  max-height: 80px;
-  display: block;
-  margin: 0 auto 10px auto;
-}
-
-/* Başlık stili */
-.app-page .grid-item h3 {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 1.5em;
-}
-
-/* Etiketlerin stili */
-.app-page .grid-item .tags span {
-  background-color: #e0e0e0;
-  color: #555;
-  border-radius: 12px;
-  padding: 5px 10px;
-  margin: 2px;
-  font-size: 0.85em;
-}
+/* Diğer CSS kodları (logo, başlık, detaylar, vb.) */
 
 /* Arama kutusu stili */
-#searchInput {
+#searchContainer {
   width: 90%;
-  padding: 12px 20px;
   margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 12px 20px;
   box-sizing: border-box;
   font-size: 16px;
-  display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-/* GitHub info stili */
-.github-info {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.github-info a {
-  display: inline-block;
-  padding: 8px 12px;
-  margin: 5px;
+#searchButton {
+  padding: 12px 20px;
+  margin-left: 10px;
   background-color: #0366d6;
   color: #fff;
+  border: none;
   border-radius: 4px;
-  text-decoration: none;
-  font-size: 0.9em;
+  cursor: pointer;
 }
 
-.github-info a:hover {
+#searchButton:hover {
   background-color: #024b9b;
 }
 
-.github-info img {
-  vertical-align: middle;
-  margin-left: 5px;
+/* Tag filtre stili */
+#tagFilter {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-/* Hover efekti */
-.app-page .grid-item:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.tag-button {
+  padding: 8px 12px;
+  margin: 5px;
+  background-color: #e0e0e0;
+  color: #555;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9em;
 }
 
-/* Responsive tasarım için medya sorguları */
-@media (max-width: 600px) {
-  .app-page .grid-container {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  }
-
-  .app-page .grid-item {
-    width: 100%;
-    /* Yüksekliği içeriğe göre ayarlanacak */
-  }
+.tag-button:hover {
+  background-color: #d0d0d0;
 }

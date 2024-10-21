@@ -74,7 +74,7 @@ permalink: /app/
     };
     var fuse = new Fuse(appData, fuseOptions);
 
-    window.searchApps = function() {
+    function searchApps(event) {
       var input = document.getElementById('searchInput').value;
       if (input) {
         var results = fuse.search(input);
@@ -91,6 +91,10 @@ permalink: /app/
         appElements.forEach(function(el) {
           el.style.display = '';
         });
+      }
+      // Eğer Enter tuşuna basıldıysa varsayılan form submit işlemini engelle
+      if (event && event.keyCode === 13) {
+        event.preventDefault();
       }
     }
   });
