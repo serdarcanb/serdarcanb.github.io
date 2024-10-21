@@ -44,7 +44,6 @@ permalink: /app/
   </div>
 </div>
 
-<!-- JavaScript kodu -->
 <script>
   function toggleDetails(element) {
     var allItems = document.querySelectorAll('.grid-item');
@@ -70,32 +69,26 @@ permalink: /app/
 
     var fuseOptions = {
       keys: ['title', 'tags', 'description'],
-      threshold: 0.4,
+      threshold: 0.3,
     };
     var fuse = new Fuse(appData, fuseOptions);
 
-  function searchApps(event) {
-    var input = document.getElementById('searchInput').value;
-    if (input) {
+    // Fix search functionality
+    document.getElementById('searchInput').addEventListener('keyup', function(event) {
+      var input = this.value;
       var results = fuse.search(input);
-      var resultElements = results.map(function(result) {
-        return result.item.element;
-      });
       appElements.forEach(function(el) {
         el.style.display = 'none';
       });
-      resultElements.forEach(function(el) {
-        el.style.display = '';
-      });
-    } else {
-      appElements.forEach(function(el) {
-        el.style.display = '';
-      });
-    }
-    // Eğer Enter tuşuna basıldıysa varsayılan form submit işlemini engelle
-    if (event && event.keyCode === 13) {
-      event.preventDefault();
-    }
-  }
+      if (results.length > 0) {
+        results.forEach(function(result) {
+          result.item.element.style.display = 'block';
+        });
+      } else if (input === '') {
+        appElements.forEach(function(el) {
+          el.style.display = 'block';
+        });
+      }
+    });
   });
 </script>
