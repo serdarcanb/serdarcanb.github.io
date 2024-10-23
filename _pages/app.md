@@ -20,15 +20,15 @@ permalink: /app/
   <!-- New Filters and Search Row -->
   <div class="row mb-4">
     <div class="col-12 text-center">
-      <h1>Self-Hosted Software and Apps</h1>
+      <h1>All in one</h1>
     </div>
     <div class="col-md-12">
       <div class="d-flex justify-content-between align-items-center">
         <!-- Tabs -->
         <div class="btn-group" role="group">
-          <button type="button" class="btn btn-outline-secondary active" id="softwareTab" onclick="filterCategory('software')">SOFTWARE</button>
-          <button type="button" class="btn btn-outline-secondary" id="companionsTab" onclick="filterCategory('companions')">COMPANIONS</button>
-          <button type="button" class="btn btn-outline-secondary" id="activitypubTab" onclick="filterCategory('activitypub')">ACTIVITYPUB</button>
+          <button type="button" class="btn btn-outline-secondary active" id="softwareTab" onclick="filterCategory('software')">Open-Source</button>
+          <button type="button" class="btn btn-outline-secondary" id="companionsTab" onclick="filterCategory('companions')">Apps</button>
+          <button type="button" class="btn btn-outline-secondary" id="activitypubTab" onclick="filterCategory('activitypub')">Article</button>
         </div>
         <!-- Toggles -->
         <div class="d-flex align-items-center">
@@ -56,17 +56,10 @@ permalink: /app/
           <option value="ios">iOS</option>
           <option value="android">Android</option>
         </select>
-        <select id="sortSelect" class="form-control">
-          <option value="default">Default</option>
-          <option value="name">Name</option>
-          <option value="date">Date</option>
-        </select>
         <input type="text" class="form-control" id="searchInput" placeholder="Enter keyword..." onkeyup="searchApps()">
       </div>
     </div>
   </div>
-
-  <!-- Dynamic Content -->
   <div class="row app-page">
     {% for item in site.software %}
     <div class="col-md-3 col-sm-6 grid-item" data-category="{{ item.category }}" data-title="{{ item.title }}" data-tags="{{ item.tags | join: ', ' }}" data-platform="{{ item.platform }}" data-closed-source="{{ item.closed_source }}" data-description="{{ item.description }}">
