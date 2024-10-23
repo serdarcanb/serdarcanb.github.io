@@ -1,11 +1,11 @@
-/* Genel body stili */
+/* General body style */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
 
-/* Arama kutusu */
+/* Search Input */
 #searchInput {
   width: 100%;
   padding: 15px;
@@ -23,7 +23,7 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Kart düzeni */
+/* Card Layout */
 .grid-item {
   cursor: pointer;
   display: flex;
@@ -31,9 +31,39 @@ body {
   justify-content: space-between;
   text-align: center;
   height: 100%;
+  margin-bottom: 20px;
 }
 
-.grid-item .details {
+/* Aligning logo and title side by side */
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.project-logo {
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 15px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Tags styling */
+.tags span {
+  background-color: #e0e0e0;
+  color: #555;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 0.85em;
+  display: inline-block;
+}
+
+/* Details section for expanding and collapsing */
+.details {
   display: none;
   opacity: 0;
   transition: all 0.3s ease;
@@ -43,61 +73,4 @@ body {
   display: block;
   opacity: 1;
   margin-top: 15px;
-}
-
-.project-logo {
-  max-width: 100px;
-  max-height: 100px;
-  margin-bottom: 15px;
-}
-
-.grid-item h3 {
-  font-size: 1.4em;
-  margin: 10px 0;
-  font-weight: bold;
-}
-
-.grid-item p {
-  margin-top: 10px;
-  line-height: 1.5em;
-  color: #666;
-}
-
-.tags span {
-  background-color: #e0e0e0;
-  color: #555;
-  border-radius: 12px;
-  padding: 5px 10px;
-  margin: 5px;
-  font-size: 0.85em
-
-;
-  display: inline-block;
-}
-
-/* Yeni switch stil */
-.switch {
-  display: inline-block;
-  width: 34px;
-  height: 20px;
-  position: relative;
-}
-
-.switch input {
-  display: none;
-}
-
-.switch span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 34px;
-}
-
-.switch input:checked + span {
-  background-color: #4CAF50;
 }

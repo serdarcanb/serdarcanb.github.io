@@ -31,12 +31,18 @@ permalink: /app/
           <button type="button" class="btn btn-outline-secondary" id="activitypubTab" onclick="filterCategory('activitypub')">Article</button>
         </div>
       </div>
-      <!-- Tags, Platform, Sort, and Search -->
+      <!-- Tags, Platform, and Search -->
       <div class="d-flex justify-content-between mt-4">
         <select id="tagsSelect" class="form-control">
           <option value="all">All Tags</option>
-          {% for tag in site.tags %}
-          <option value="{{ tag }}">{{ tag }}</option>
+          {% assign all_tags = "" %}
+          {% for item in site.software %}
+            {% for tag in item.tags %}
+              {% unless all_tags contains tag %}
+                <option value="{{ tag }}">{{ tag }}</option>
+                {% assign all_tags = all_tags | append: tag %}
+              {% endunless %}
+            {% endfor %}
           {% endfor %}
         </select>
         <select id="platformSelect" class="form-control">
@@ -49,15 +55,18 @@ permalink: /app/
       </div>
     </div>
   </div>
+  <!-- Dynamic Content -->
   <div class="row app-page">
     {% for item in site.software %}
     <div class="col-md-3 col-sm-6 grid-item" data-category="{{ item.category }}" data-title="{{ item.title }}" data-tags="{{ item.tags | join: ', ' }}" data-platform="{{ item.platform }}" data-closed-source="{{ item.closed_source }}" data-description="{{ item.description }}">
-      <div class="card h-100 shadow-sm">
-        <img src="{{ item.logo }}" alt="{{ item.title }} logo" class="project-logo card-img-top mx-auto mt-3" style="width: 100px;">
-        <div class="card-body text-center">
+      <div class="card h-100 shadow-sm" onclick="toggleDetails(this)">
+        <div class="d-flex align-items-center justify-content-start">
+          <img src="{{ item.logo }}" alt="{{ item.title }} logo" class="project-logo card-img-left mx-3" style="width: 40px; height: 40px;">
           <h3 class="card-title">{{ item.title }}</h3>
+        </div>
+        <div class="card-body text-center">
           <p class="card-text">{{ item.description }}</p>
-          <div class="details">
+          <div class="details" style="display: none;">
             <p class="tags">Tags: 
               {% for tag in item.tags %}
               <span class="badge blue-400">{{ tag }}</span>
@@ -75,17 +84,17 @@ permalink: /app/
     {% endfor %}
   </div>
 </div>
-
 <script>
   // Toggle Details (Expand/Collapse functionality)
   function toggleDetails(element) {
-    var allItems = document.querySelectorAll('.grid-item');
-    allItems.forEach(function(item) {
-      if (item !== element) {
-        item.classList.remove('active');
+    var details = element.querySelector('.details');
+    if (details) {
+      if (details.style.display === 'block') {
+        details.style.display = 'none';
+      } else {
+        details.style.display = 'block';
       }
-    });
-    element.classList.toggle('active');
+    }
   }
 
   // Document ready for filtering, search, and expand functionality
@@ -101,14 +110,12 @@ permalink: /app/
         element: element
       });
     });
-
     // Fuse.js options for searching
     var fuseOptions = {
       keys: ['title', 'tags', 'description'],
       threshold: 0.3,
     };
     var fuse = new Fuse(appData, fuseOptions);
-
     // Search functionality
     document.getElementById('searchInput').addEventListener('keyup', function(event) {
       var input = this.value;
@@ -126,12 +133,10 @@ permalink: /app/
         });
       }
     });
-
     // Filtering by Tags
     document.getElementById('tagsSelect').addEventListener('change', function() {
       filterByTags(this.value);
     });
-
     function filterByTags(tag) {
       appElements.forEach(function(element) {
         var tags = element.getAttribute('data-tags').split(', ');
@@ -142,12 +147,10 @@ permalink: /app/
         }
       });
     }
-
     // Filtering by Platform
     document.getElementById('platformSelect').addEventListener('change', function() {
       filterByPlatform(this.value);
     });
-
     function filterByPlatform(platform) {
       appElements.forEach(function(element) {
         if (platform === 'all' || element.getAttribute('data-platform') === platform) {
@@ -157,7 +160,6 @@ permalink: /app/
         }
       });
     }
-
     // Filtering by Category (Software, Companions, ActivityPub)
     function filterCategory(category) {
       appElements.forEach(function(element) {
@@ -169,17 +171,5 @@ permalink: /app/
         }
       });
     }
-
-    // Closed Source Toggle
-    document.getElementById('closedSourceToggle').addEventListener('change', function() {
-      var showClosedSource = this.checked;
-      appElements.forEach(function(element) {
-        if (showClosedSource || element.getAttribute('data-closed-source') === 'false') {
-          element.style.display = 'block';
-        } else {
-          element.style.display = 'none';
-        }
-      });
-    });
   });
 </script>
