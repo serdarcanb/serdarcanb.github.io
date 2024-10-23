@@ -17,11 +17,11 @@ permalink: /app/
 </head>
 
 <div class="container mt-4">
-  <input type="text" class="form-control mb-4" id="searchInput" placeholder="Searching app..." onkeyup="searchApps()">
-  
+  <input type="text" class="form-control mb-4" id="searchInput" placeholder="Search apps..." onkeyup="searchApps()">
+
   <div class="row app-page">
     {% for item in site.software %}
-      <div class="col-md-3 col-md-3 col-sm-6 grid-item" onclick="toggleDetails(this)" data-title="{{ item.title | escape }}" data-tags="{{ item.tags | join: ', ' | escape }}" data-description="{{ item.description | escape }}">
+      <div class="col-md-3 col-sm-6 grid-item" data-title="{{ item.title | escape }}" data-tags="{{ item.tags | join: ', ' | escape }}" data-description="{{ item.description | escape }}">
         <div class="card h-100 shadow-sm">
           <img src="{{ item.logo }}" alt="{{ item.title }} logo" class="project-logo card-img-top mx-auto mt-3" style="width: 100px;">
           <div class="card-body text-center">
@@ -31,28 +31,23 @@ permalink: /app/
             <div class="details">
               <p class="tags">Tags:
                 {% for tag in item.tags %}
-                  <span class="badge blue-400">{{ tag }}</span>
+                  <span class="badge bg-dark">{{ tag }}</span>
                 {% endfor %}
               </p>
+
+              <!-- GitHub ve Website logoları -->
               {% if item.github_url %}
-                <!-- GitHub bağlantısı ve star sayısı -->
                 <a href="{{ item.github_url }}" target="_blank" class="d-inline-flex align-items-center">
-                  <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" style="width: 12px; height: 12px; margin-right: 8px;">
+                  <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" style="width: 16px; height: 16px; margin-right: 8px;">
                   <img src="https://img.shields.io/github/stars/{{ item.github_url | remove: 'https://github.com/' }}?style=social" alt="GitHub stars" style="margin-left: 8px;">
                 </a>
-              {% elsif item.website_url %}
-                <!-- Website bağlantısı ve logo -->
-                <a href="{{ item.website_url }}" target="_blank" class="d-inline-flex align-items-center">
+              {% endif %}
+              
+              {% if item.website_url %}
+                <a href="{{ item.website_url }}" target="_blank" class="d-inline-flex align-items-center mt-2">
                   <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 24px; height: 24px; margin-right: 8px;">
                 </a>
               {% endif %}
-              </p>
-              <style>
-                .small-text {
-                  font-size: 0.85em; /* Yazı boyutunu küçültür */
-                  color: #555; /* Daha okunaklı olması için renk ayarlaması */
-                }
-              </style>              
             </div>
           </div>
         </div>
@@ -90,7 +85,6 @@ permalink: /app/
     };
     var fuse = new Fuse(appData, fuseOptions);
 
-    // Fix search functionality
     document.getElementById('searchInput').addEventListener('keyup', function(event) {
       var input = this.value;
       var results = fuse.search(input);
