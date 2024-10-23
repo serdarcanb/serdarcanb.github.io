@@ -17,45 +17,78 @@ permalink: /app/
 </head>
 
 <div class="container mt-4">
-  <input type="text" class="form-control mb-4" id="searchInput" placeholder="Searching app..." onkeyup="searchApps()">
-  
+  <!-- New Filters and Search Row -->
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <h1>Self-Hosted Software and Apps</h1>
+    </div>
+    <div class="col-md-12">
+      <div class="d-flex justify-content-around align-items-center">
+        <!-- Tabs -->
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-outline-secondary active" id="softwareTab" onclick="filterCategory('software')">SOFTWARE</button>
+          <button type="button" class="btn btn-outline-secondary" id="companionsTab" onclick="filterCategory('companions')">COMPANIONS</button>
+          <button type="button" class="btn btn-outline-secondary" id="activitypubTab" onclick="filterCategory('activitypub')">ACTIVITYPUB</button>
+        </div>
+        <!-- Toggles -->
+        <div class="d-flex align-items-center">
+          <label class="switch mr-2">
+            <input type="checkbox" id="detailsToggle">
+            <span>Details</span>
+          </label>
+          <label class="switch">
+            <input type="checkbox" id="closedSourceToggle">
+            <span>Closed Source</span>
+          </label>
+        </div>
+      </div>
+      <!-- Tags, Platform, Sort, and Search -->
+      <div class="d-flex justify-content-around mt-4">
+        <select id="tagsSelect" class="form-control">
+          <option value="all">All Tags</option>
+          {% for tag in site.tags %}
+          <option value="{{ tag }}">{{ tag }}</option>
+          {% endfor %}
+        </select>
+        <select id="platformSelect" class="form-control">
+          <option value="all">All Platforms</option>
+          <option value="desktop">Desktop</option>
+          <option value="ios">iOS</option>
+          <option value="android">Android</option>
+        </select>
+        <select id="sortSelect" class="form-control">
+          <option value="default">Default</option>
+          <option value="name">Name</option>
+          <option value="date">Date</option>
+        </select>
+        <input type="text" class="form-control" id="searchInput" placeholder="Enter keyword..." onkeyup="searchApps()">
+      </div>
+    </div>
+  </div>
+  <!-- Dynamic Content -->
   <div class="row app-page">
     {% for item in site.software %}
-      <div class="col-md-3 col-md-3 col-sm-6 grid-item" onclick="toggleDetails(this)" data-title="{{ item.title | escape }}" data-tags="{{ item.tags | join: ', ' | escape }}" data-description="{{ item.description | escape }}">
-        <div class="card h-100 shadow-sm">
-          <img src="{{ item.logo }}" alt="{{ item.title }} logo" class="project-logo card-img-top mx-auto mt-3" style="width: 100px;">
-          <div class="card-body text-center">
-            <h3 class="card-title">{{ item.title }}</h3>
-            <p class="card-text">{{ item.description }}</p>
-            <!-- Etiketler ve GitHub/Website detayları için gizli bölüm -->
-            <div class="details">
-              <p class="tags">Tags:
-                {% for tag in item.tags %}
-                  <span class="badge blue-400">{{ tag }}</span>
-                {% endfor %}
-              </p>
-              {% if item.github_url %}
-                <!-- GitHub bağlantısı ve star sayısı -->
-                <a href="{{ item.github_url }}" target="_blank" class="d-inline-flex align-items-center">
-                  <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" style="width: 12px; height: 12px; margin-right: 8px;">
-                  <img src="https://img.shields.io/github/stars/{{ item.github_url | remove: 'https://github.com/' }}?style=social" alt="GitHub stars" style="margin-left: 8px;">
-                </a>
-              {% elsif item.website_url %}
-                <!-- Website bağlantısı ve logo -->
-                <a href="{{ item.website_url }}" target="_blank" class="d-inline-flex align-items-center">
-                  <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 24px; height: 24px; margin-right: 8px;">
-                </a>
-              {% endif %}
-              <style>
-                .small-text {
-                  font-size: 0.85em; /* Yazı boyutunu küçültür */
-                  color: #555; /* Daha okunaklı olması için renk ayarlaması */
-                }
-              </style>              
-            </div>
+    <div class="col-md-3 col-sm-6 grid-item" data-category="{{ item.category }}" data-title="{{ item.title }}" data-tags="{{ item.tags | join: ', ' }}" data-platform="{{ item.platform }}" data-closed-source="{{ item.closed_source }}" data-description="{{ item.description }}">
+      <div class="card h-100 shadow-sm">
+        <img src="{{ item.logo }}" alt="{{ item.title }} logo" class="project-logo card-img-top mx-auto mt-3" style="width: 100px;">
+        <div class="card-body text-center">
+          <h3 class="card-title">{{ item.title }}</h3>
+          <p class="card-text">{{ item.description }}</p>
+          <div class="details">
+            <p class="tags">Tags: 
+              {% for tag in item.tags %}
+              <span class="badge blue-400">{{ tag }}</span>
+              {% endfor %}
+            </p>
+            {% if item.github_url %}
+            <a href="{{ item.github_url }}" target="_blank">GitHub</a>
+            {% elsif item.website_url %}
+            <a href="{{ item.website_url }}" target="_blank">Website</a>
+            {% endif %}
           </div>
         </div>
       </div>
+    </div>
     {% endfor %}
   </div>
 </div>
@@ -89,7 +122,6 @@ permalink: /app/
     };
     var fuse = new Fuse(appData, fuseOptions);
 
-    // Fix search functionality
     document.getElementById('searchInput').addEventListener('keyup', function(event) {
       var input = this.value;
       var results = fuse.search(input);
@@ -105,6 +137,46 @@ permalink: /app/
           el.style.display = 'block';
         });
       }
+    });
+
+    document.getElementById('tagsSelect').addEventListener('change', function() {
+      filterByTags(this.value);
+    });
+
+    function filterByTags(tag) {
+      appElements.forEach(function(element) {
+        var tags = element.getAttribute('data-tags').split(', ');
+        if (tag === 'all' || tags.includes(tag)) {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+    }
+
+    document.getElementById('platformSelect').addEventListener('change', function() {
+      filterByPlatform(this.value);
+    });
+
+    function filterByPlatform(platform) {
+      appElements.forEach(function(element) {
+        if (platform === 'all' || element.getAttribute('data-platform') === platform) {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+    }
+
+    document.getElementById('closedSourceToggle').addEventListener('change', function() {
+      var showClosedSource = this.checked;
+      appElements.forEach(function(element) {
+        if (showClosedSource || element.getAttribute('data-closed-source') === 'false') {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      });
     });
   });
 </script>
