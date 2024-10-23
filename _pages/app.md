@@ -95,6 +95,7 @@ permalink: /app/
 </div>
 
 <script>
+  // Toggle Details (Expand/Collapse functionality)
   function toggleDetails(element) {
     var allItems = document.querySelectorAll('.grid-item');
     allItems.forEach(function(item) {
@@ -105,6 +106,7 @@ permalink: /app/
     element.classList.toggle('active');
   }
 
+  // Document ready for filtering, search, and expand functionality
   document.addEventListener("DOMContentLoaded", function() {
     var appElements = document.querySelectorAll('.grid-item');
     var appData = [];
@@ -112,17 +114,20 @@ permalink: /app/
       appData.push({
         title: element.getAttribute('data-title'),
         tags: element.getAttribute('data-tags').split(', '),
+        category: element.getAttribute('data-category'),
         description: element.getAttribute('data-description'),
         element: element
       });
     });
 
+    // Fuse.js options for searching
     var fuseOptions = {
       keys: ['title', 'tags', 'description'],
       threshold: 0.3,
     };
     var fuse = new Fuse(appData, fuseOptions);
 
+    // Search functionality
     document.getElementById('searchInput').addEventListener('keyup', function(event) {
       var input = this.value;
       var results = fuse.search(input);
@@ -140,6 +145,7 @@ permalink: /app/
       }
     });
 
+    // Filtering by Tags
     document.getElementById('tagsSelect').addEventListener('change', function() {
       filterByTags(this.value);
     });
@@ -155,6 +161,7 @@ permalink: /app/
       });
     }
 
+    // Filtering by Platform
     document.getElementById('platformSelect').addEventListener('change', function() {
       filterByPlatform(this.value);
     });
@@ -169,6 +176,19 @@ permalink: /app/
       });
     }
 
+    // Filtering by Category (Software, Companions, ActivityPub)
+    function filterCategory(category) {
+      appElements.forEach(function(element) {
+        var elementCategory = element.getAttribute('data-category');
+        if (category === 'all' || elementCategory === category) {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      });
+    }
+
+    // Closed Source Toggle
     document.getElementById('closedSourceToggle').addEventListener('change', function() {
       var showClosedSource = this.checked;
       appElements.forEach(function(element) {
