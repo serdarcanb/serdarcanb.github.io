@@ -31,7 +31,7 @@ permalink: /app/
             <div class="details">
               <p class="tags">Tags:
                 {% for tag in item.tags %}
-                  <span class="blue-400 bg-dark">{{ tag }}</span>
+                  <span class="badge blue-400">{{ tag }}</span>
                 {% endfor %}
               </p>
               <p class="github-info">
