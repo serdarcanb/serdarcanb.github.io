@@ -23,7 +23,7 @@ permalink: /app/
       <h1>Self-Hosted Software and Apps</h1>
     </div>
     <div class="col-md-12">
-      <div class="d-flex justify-content-around align-items-center">
+      <div class="d-flex justify-content-between align-items-center">
         <!-- Tabs -->
         <div class="btn-group" role="group">
           <button type="button" class="btn btn-outline-secondary active" id="softwareTab" onclick="filterCategory('software')">SOFTWARE</button>
@@ -32,18 +32,18 @@ permalink: /app/
         </div>
         <!-- Toggles -->
         <div class="d-flex align-items-center">
-          <label class="switch mr-2">
-            <input type="checkbox" id="detailsToggle">
-            <span>Details</span>
+          <label class="form-check-label mr-2">
+            <input type="checkbox" id="detailsToggle" class="form-check-input">
+            Details
           </label>
-          <label class="switch">
-            <input type="checkbox" id="closedSourceToggle">
-            <span>Closed Source</span>
+          <label class="form-check-label">
+            <input type="checkbox" id="closedSourceToggle" class="form-check-input">
+            Closed Source
           </label>
         </div>
       </div>
       <!-- Tags, Platform, Sort, and Search -->
-      <div class="d-flex justify-content-around mt-4">
+      <div class="d-flex justify-content-between mt-4">
         <select id="tagsSelect" class="form-control">
           <option value="all">All Tags</option>
           {% for tag in site.tags %}
@@ -65,6 +65,7 @@ permalink: /app/
       </div>
     </div>
   </div>
+
   <!-- Dynamic Content -->
   <div class="row app-page">
     {% for item in site.software %}
