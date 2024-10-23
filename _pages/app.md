@@ -34,21 +34,20 @@ permalink: /app/
                   <span class="badge blue-400">{{ tag }}</span>
                 {% endfor %}
               </p>
-              <p class="github-info">
-                {% if item.github_url %}
-                  <!-- GitHub bağlantısı ve star sayısı -->
-                  <a href="{{ item.github_url }}" target="_blank" class="d-inline-flex align-items-center">
-                    <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" style="width: 12px; height: 12px; margin-right: 8px;">
-                    <span>GitHub</span>
-                    <img src="https://img.shields.io/github/stars/{{ item.github_url | remove: 'https://github.com/' }}?style=social" alt="GitHub stars" style="margin-left: 8px;">
-                  </a>
-                {% elsif item.website_url %}
-                  <!-- Website bağlantısı ve logo -->
-                  <a href="{{ item.website_url }}" target="_blank" class="d-inline-flex align-items-center">
-                    <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 24px; height: 24px; margin-right: 8px;">
-                    <span>Website</span>
-                  </a>
-                {% endif %}
+              {% if item.github_url %}
+                <!-- GitHub bağlantısı ve star sayısı -->
+                <a href="{{ item.github_url }}" target="_blank" class="d-inline-flex align-items-center">
+                  <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" style="width: 12px; height: 12px; margin-right: 8px;">
+                </a>
+                <span>GitHub</span>
+                <img src="https://img.shields.io/github/stars/{{ item.github_url | remove: 'https://github.com/' }}?style=social" alt="GitHub stars" style="margin-left: 8px;">
+              {% elsif item.website_url %}
+                <!-- Website bağlantısı ve logo -->
+                <a href="{{ item.website_url }}" target="_blank" class="d-inline-flex align-items-center">
+                  <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 24px; height: 24px; margin-right: 8px;">
+                </a>
+                <span>Website</span>
+              {% endif %}
               </p>
               <style>
                 .small-text {
