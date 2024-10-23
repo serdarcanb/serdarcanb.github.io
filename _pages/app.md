@@ -31,7 +31,7 @@ permalink: /app/
             <div class="details">
               <p class="tags">Tags:
                 {% for tag in item.tags %}
-                  <span class="badge bg-dark">{{ tag }}</span>
+                  <span class="blue-400 bg-dark">{{ tag }}</span>
                 {% endfor %}
               </p>
               <p class="github-info">
@@ -45,7 +45,7 @@ permalink: /app/
                 {% elsif item.website_url %}
                   <!-- Website bağlantısı ve logo -->
                   <a href="{{ item.website_url }}" target="_blank" class="d-inline-flex align-items-center">
-                    <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 12px; height: 12px; margin-right: 8px;">
+                    <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 24px; height: 24px; margin-right: 8px;">
                     <span>Website</span>
                   </a>
                 {% endif %}
