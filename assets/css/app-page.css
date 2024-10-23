@@ -3,20 +3,15 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  transition: background-color 0.5s, color 0.5s;
 }
 
-/* Dark mode */
-body.dark {
-  background-color: #333;
-  color: #f9f9f9;
-}
-
+/* Arama kutusu */
 #searchInput {
   width: 100%;
-  padding: 12px;
+  padding: 15px;
   margin: 0 auto;
-  font-size: 14px;
+  box-sizing: border-box;
+  font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 25px;
   outline: none;
@@ -25,70 +20,55 @@ body.dark {
 
 #searchInput:focus {
   border-color: #333;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Kart düzeni */
 .grid-item {
   cursor: pointer;
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
+  height: 100%;
+}
+
+.grid-item .details {
+  display: none;
+  opacity: 0;
   transition: all 0.3s ease;
 }
 
+.grid-item.active .details {
+  display: block;
+  opacity: 1;
+  margin-top: 15px;
+}
+
 .project-logo {
-  max-width: 80px;
-  margin-bottom: 10px;
+  max-width: 100px;
+  max-height: 100px;
+  margin-bottom: 15px;
 }
 
 .grid-item h3 {
-  font-size: 1.2em;
-  margin: 8px 0;
+  font-size: 1.4em;
+  margin: 10px 0;
   font-weight: bold;
 }
 
+.grid-item p {
+  margin-top: 10px;
+  line-height: 1.5em;
+  color: #666;
+}
+
 .tags span {
-  display: inline-block;
+  background-color: #e0e0e0;
+  color: #555;
+  border-radius: 12px;
   padding: 5px 10px;
   margin: 5px;
   font-size: 0.85em;
-  background-color: #e0e0e0;
-  border-radius: 12px;
-}
-
-.tags span:hover {
-  background-color: #ccc;
-}
-
-.github-info a {
-  padding: 5px 10px;
-  margin-top: 5px;
   display: inline-block;
-  background: none;
-}
-
-.github-info img {
-  height: 20px;
-  vertical-align: middle;
-}
-
-.github-link img {
-  height: 20px;
-  margin-left: 5px;
-}
-
-.github-info a {
-  font-size: 0.9em;
-}
-
-/* Dark mode etiketler */
-body.dark .tags span {
-  background-color: #444;
-  color: #fff;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
 }
