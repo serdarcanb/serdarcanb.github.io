@@ -46,7 +46,6 @@ permalink: /app/
                   <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 24px; height: 24px; margin-right: 8px;">
                 </a>
               {% endif %}
-              </p>
               <style>
                 .small-text {
                   font-size: 0.85em; /* Yazı boyutunu küçültür */
