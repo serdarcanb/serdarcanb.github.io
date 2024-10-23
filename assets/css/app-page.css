@@ -1,22 +1,21 @@
-/* General body style */
+/* Genel body stili */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
 
-/* Search input styling */
+/* Arama kutusu */
 #searchInput {
-  width: 80%;
-  padding: 15px 20px;
-  margin: 20px auto;
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
   box-sizing: border-box;
   font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 25px;
   outline: none;
   transition: all 0.3s ease;
-  display: block;
 }
 
 #searchInput:focus {
@@ -24,99 +23,47 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Tag section below search bar */
-.tag-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.tag-container .tag {
-  background-color: #e0e0e0;
-  color: #555;
-  border-radius: 12px;
-  padding: 8px 15px;
-  margin: 5px;
-  font-size: 0.85em;
+/* Kart düzeni */
+.grid-item {
   cursor: pointer;
-}
-
-.tag-container .tag:hover {
-  background-color: #ccc;
-  color: #333;
-}
-
-/* Grid container styling */
-.app-page .grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 25px;
-  margin: 20px auto;
-  padding: 0 10px;
-  justify-content: center;
-  align-items: start;
-}
-
-/* Grid item (card) styling */
-.app-page .grid-item {
-  background-color: #fff;
-  color: #333;
-  padding: 20px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 350px;  /* Fixed height for all app cards */
+  text-align: center;
+  height: 100%;
 }
 
-.app-page .grid-item.active {
-  height: auto; /* Allow height to grow for the active element */
-}
-
-.app-page .grid-item .details {
+.grid-item .details {
   display: none;
   opacity: 0;
   transition: all 0.3s ease;
 }
 
-.app-page .grid-item.active .details {
+.grid-item.active .details {
   display: block;
   opacity: 1;
   margin-top: 15px;
 }
 
-/* Hover effects */
-.app-page .grid-item:hover {
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* App Logo styling */
 .project-logo {
   max-width: 100px;
   max-height: 100px;
-  margin: 0 auto 15px auto;
+  margin-bottom: 15px;
 }
 
-/* Title and text styling */
-.app-page .grid-item h3 {
+.grid-item h3 {
   font-size: 1.4em;
   margin: 10px 0;
   font-weight: bold;
 }
 
-.app-page .grid-item p {
-  flex-grow: 1;
+.grid-item p {
   margin-top: 10px;
   line-height: 1.5em;
   color: #666;
 }
 
-/* Tags styling */
-.app-page .grid-item .tags span {
+.tags span {
   background-color: #e0e0e0;
   color: #555;
   border-radius: 12px;
@@ -124,32 +71,4 @@ body {
   margin: 5px;
   font-size: 0.85em;
   display: inline-block;
-}
-
-/* GitHub/Website section */
-.github-info a {
-  padding: 10px 20px;
-  margin-top: 15px;
-  background-color: #0366d6;
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 0.9em;
-  display: inline-block;
-}
-
-.github-info a:hover {
-  background-color: #024b9b;
-}
-
-.github-info img {
-  vertical-align: middle;
-  margin-left: 8px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .app-page .grid-container {
-    grid-template-columns: 1fr;
-  }
 }
