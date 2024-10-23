@@ -31,15 +31,23 @@ permalink: /app/
             <div class="details">
               <p class="tags">Tags:
                 {% for tag in item.tags %}
-                  <span class="badge bg-secondary">{{ tag }}</span>
+                  <span class="badge bg-dark">{{ tag }}</span>
                 {% endfor %}
               </p>
               <p class="github-info">
                 {% if item.github_url %}
-                  <a href="{{ item.github_url }}" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
-                  <img src="https://img.shields.io/github/stars/{{ item.github_url | remove: 'https://github.com/' }}?style=social" alt="GitHub stars"/>
+                  <!-- GitHub bağlantısı ve star sayısı -->
+                  <a href="{{ item.github_url }}" target="_blank" class="d-inline-flex align-items-center">
+                    <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" style="width: 12px; height: 12px; margin-right: 8px;">
+                    <span>GitHub</span>
+                    <img src="https://img.shields.io/github/stars/{{ item.github_url | remove: 'https://github.com/' }}?style=social" alt="GitHub stars" style="margin-left: 8px;">
+                  </a>
                 {% elsif item.website_url %}
-                  <a href="{{ item.website_url }}" class="btn btn-primary btn-sm" target="_blank">Website</a>
+                  <!-- Website bağlantısı ve logo -->
+                  <a href="{{ item.website_url }}" target="_blank" class="d-inline-flex align-items-center">
+                    <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 12px; height: 12px; margin-right: 8px;">
+                    <span>Website</span>
+                  </a>
                 {% endif %}
               </p>
             </div>
