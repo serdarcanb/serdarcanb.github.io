@@ -50,6 +50,12 @@ permalink: /app/
                   </a>
                 {% endif %}
               </p>
+              <style>
+                .small-text {
+                  font-size: 0.85em; /* Yazı boyutunu küçültür */
+                  color: #555; /* Daha okunaklı olması için renk ayarlaması */
+                }
+              </style>              
             </div>
           </div>
         </div>
