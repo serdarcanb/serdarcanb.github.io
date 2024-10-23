@@ -34,15 +34,12 @@ permalink: /app/
                   <span class="badge bg-dark">{{ tag }}</span>
                 {% endfor %}
               </p>
-
-              <!-- GitHub ve Website logoları -->
               {% if item.github_url %}
                 <a href="{{ item.github_url }}" target="_blank" class="d-inline-flex align-items-center">
                   <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" style="width: 16px; height: 16px; margin-right: 8px;">
                   <img src="https://img.shields.io/github/stars/{{ item.github_url | remove: 'https://github.com/' }}?style=social" alt="GitHub stars" style="margin-left: 8px;">
                 </a>
               {% endif %}
-              
               {% if item.website_url %}
                 <a href="{{ item.website_url }}" target="_blank" class="d-inline-flex align-items-center mt-2">
                   <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 24px; height: 24px; margin-right: 8px;">
