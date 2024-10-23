@@ -65,17 +65,31 @@ permalink: /app/
         </div>
         <div class="card-body text-center">
           <p class="card-text">{{ item.description }}</p>
-          <div class="details" style="display: none;">
-            <p class="tags">Tags: 
+          <div class="details">
+            <p class="tags">Tags:
               {% for tag in item.tags %}
-              <span class="badge blue-400">{{ tag }}</span>
+                <span class="badge blue-400">{{ tag }}</span>
               {% endfor %}
             </p>
             {% if item.github_url %}
-            <a href="{{ item.github_url }}" target="_blank">GitHub</a>
+              <!-- GitHub bağlantısı ve star sayısı -->
+              <a href="{{ item.github_url }}" target="_blank" class="d-inline-flex align-items-center">
+                <img src="https://serdarcanb.github.io/assets/images/logos/github.svg" alt="GitHub" style="width: 12px; height: 12px; margin-right: 8px;">
+                <img src="https://img.shields.io/github/stars/{{ item.github_url | remove: 'https://github.com/' }}?style=social" alt="GitHub stars" style="margin-left: 8px;">
+              </a>
             {% elsif item.website_url %}
-            <a href="{{ item.website_url }}" target="_blank">Website</a>
+              <!-- Website bağlantısı ve logo -->
+              <a href="{{ item.website_url }}" target="_blank" class="d-inline-flex align-items-center">
+                <img src="https://serdarcanb.github.io/assets/images/mylogo.svg" alt="Website" style="width: 24px; height: 24px; margin-right: 8px;">
+              </a>
             {% endif %}
+            </p>
+            <style>
+              .small-text {
+                font-size: 0.85em; /* Yazı boyutunu küçültür */
+                color: #555; /* Daha okunaklı olması için renk ayarlaması */
+              }
+            </style>              
           </div>
         </div>
       </div>
