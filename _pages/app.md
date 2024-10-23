@@ -30,17 +30,6 @@ permalink: /app/
           <button type="button" class="btn btn-outline-secondary" id="companionsTab" onclick="filterCategory('companions')">Apps</button>
           <button type="button" class="btn btn-outline-secondary" id="activitypubTab" onclick="filterCategory('activitypub')">Article</button>
         </div>
-        <!-- Toggles -->
-        <div class="d-flex align-items-center">
-          <label class="form-check-label mr-2">
-            <input type="checkbox" id="detailsToggle" class="form-check-input">
-            Details
-          </label>
-          <label class="form-check-label">
-            <input type="checkbox" id="closedSourceToggle" class="form-check-input">
-            Closed Source
-          </label>
-        </div>
       </div>
       <!-- Tags, Platform, Sort, and Search -->
       <div class="d-flex justify-content-between mt-4">
