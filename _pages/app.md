@@ -15,7 +15,6 @@ permalink: /app/
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <div class="container mt-4">
   <!-- New Filters and Search Row -->
   <div class="row mb-4">
@@ -61,7 +60,7 @@ permalink: /app/
     <div class="col-md-3 col-sm-6 grid-item" data-category="{{ item.category }}" data-title="{{ item.title }}" data-tags="{{ item.tags | join: ', ' }}" data-platform="{{ item.platform }}" data-closed-source="{{ item.closed_source }}" data-description="{{ item.description }}">
       <div class="card h-100 shadow-sm" onclick="toggleDetails(this)">
         <div class="d-flex align-items-center justify-content-start">
-          <img src="{{ item.logo }}" alt="{{ item.title }} logo" class="project-logo card-img-left mx-3" style="width: 40px; height: 40px;">
+          <img src="{{ item.logo }}" alt="{{ item.title }} logo" class="project-logo card-img-left mx-3">
           <h3 class="card-title">{{ item.title }}</h3>
         </div>
         <div class="card-body text-center">
@@ -96,7 +95,6 @@ permalink: /app/
       }
     }
   }
-
   // Document ready for filtering, search, and expand functionality
   document.addEventListener("DOMContentLoaded", function() {
     var appElements = document.querySelectorAll('.grid-item');

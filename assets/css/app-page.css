@@ -38,6 +38,7 @@ body {
 .d-flex {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .project-logo {
@@ -49,6 +50,7 @@ body {
 .card-title {
   font-size: 1.2em;
   font-weight: bold;
+  text-align: left;
 }
 
 /* Tags styling */
