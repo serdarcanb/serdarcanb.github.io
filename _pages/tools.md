@@ -80,6 +80,7 @@ Click the categories below to filter tools by type:
 | Name                                                                                                                                           | 
 |:---------------------------------------------------------------------------------------------------------------------------------------------- |
 | [How Notion Scaled to 100 Million Users Without Their Database Exploding](https://www.youtube.com/watch?v=HruBoinmPBA) | 
+| [How Uber Handles TRILLIONS of Transactions](https://www.youtube.com/watch?v=qGAPokt6Buo) | 
 
 
 ### Article
