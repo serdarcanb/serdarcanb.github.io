@@ -371,7 +371,7 @@ seo_description: Stay updated with Weekly Dev Tech Pulse, your go-to source for 
   <div class="card p-4">
     <div class="row g-0">
       <div class="col-12 col-sm-3 col-md-2 d-flex align-items-center">
-        <img src="https://private-user-images.githubusercontent.com/5467111/338042397-a5b465b6-065e-43c4-ac66-bf8a502d5bae.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk3OTYwNzMsIm5iZiI6MTcyOTc5NTc3MywicGF0aCI6Ii81NDY3MTExLzMzODA0MjM5Ny1hNWI0NjViNi0wNjVlLTQzYzQtYWM2Ni1iZjhhNTAyZDViYWUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTAyNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDEwMjRUMTg0OTMzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZDZkYmE2MjBiNjcyNjI1ZDFjMTM1M2FmNzA0N2UzZmQxNzNmNDg0YzAwZTVhMTIzOTkzNjUxMzZhYTM4ZTE2ZCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.e7OmXIMZE8-ee_4YdWiITpS4kJnCQF9BsJEq0O2DV6o" class="img-fluid rounded-start" alt="Tool Image">
+        <img src="https://serdarcanb.github.io/assets/images/ophiuchi-desktop.png" class="img-fluid rounded-start" alt="Tool Image">
       </div>
       <div class="col-12 col-sm-9 col-md-10">
         <div class="card-body">
