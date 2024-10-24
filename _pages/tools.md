@@ -55,6 +55,11 @@ Click the categories below to filter tools by type:
 | [argmaxinc/WhisperKit](https://github.com/argmaxinc/WhisperKit) | ![Github Stars](https://img.shields.io/github/stars/argmaxinc/WhisperKit) | Free  | On-device Speech Recognition for Apple Silicon | `open-source` `speech-to-text` `ai` `transcription` `machine-learning` |
 | [hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch) | ![Github Stars](https://img.shields.io/github/stars/hoppscotch/hoppscotch) | Free  | Open source API development ecosystem - https://hoppscotch.io (open-source alternative to Postman, Insomnia) |  `open-source` `api-testing` `developer-tools` |
 | [middlewarehq/middleware](https://github.com/middlewarehq/middleware) | ![Github Stars](https://img.shields.io/github/stars/middlewarehq/middleware) | Free  | ✨ Open-source DORA metrics platform for engineering teams ✨ |  `open-source` `ci/cd` `dora-metrics` |
+| [n8n-io/n8n](https://github.com/n8n-io/n8n) | ![Github Stars](https://img.shields.io/github/stars/n8n-io/n8n) | Free  | Free and source-available fair-code licensed workflow automation tool. |  `open-source` `no-code` `self-hosted` `workflow-automation` `integration` |
+| [glanceapp/glance](https://github.com/glanceapp/glance) | ![Github Stars](https://img.shields.io/github/stars/glanceapp/glance) | Free  | A self-hosted dashboard that puts all your feeds in one place |  `open-source` `dashboard` `self-hosted` `productivity` |
+| [toeverything/AFFiNE](https://github.com/toeverything/AFFiNE) | ![Github Stars](https://img.shields.io/github/stars/toeverything/AFFiNE) | Free  | There can be more than Notion and Miro. AFFiNE is a next-gen knowledge base that brings planning, sorting and creating all together. |  `open-source` `note-taking` `self-hosted` `productivity` `knowledge-management` |
+| [CorentinTh/it-tools](https://github.com/CorentinTh/it-tools) | ![Github Stars](https://img.shields.io/github/stars/CorentinTh/it-tools) | Free  | Collection of handy online tools for developers, with great UX. |  `open-source` `web-based` `self-hosted` `productivity` `developer-tools` |
+| [Cinnamon/kotaemon](https://github.com/Cinnamon/kotaemon) | ![Github Stars](https://img.shields.io/github/stars/Cinnamon/kotaemon) | Free  | An open-source RAG-based tool for chatting with your documents.|  `open-source` `document-chatbot` `self-hosted` `retrieval-augmented-generation` `ai` |
 
 
 
@@ -66,6 +71,8 @@ Click the categories below to filter tools by type:
 | [focusbrew](https://www.focusbrew.dev/) | Elevate your productivity with FocusBrew, the ultimate Chrome extension for focused work sessions. | `extension` `pomodoro` `Free` |
 | [raycast](https://www.raycast.com/) | Your shortcut to everything. | `productivity` `automation` `Free-Options` `keyboard-shortcuts` |
 | [termius](https://termius.com/) | Termius is a modern SSH client that simplifies secure server management, offering cross-platform access and collaboration features for Dev teams. | `ssh` `cli` `Free-Options` |
+| [ophiuchi-desktop](https://github.com/apilylabs/ophiuchi-desktop) | A local https proxy server using docker as backend. | `ssl` `local` `Free` |
+| [epublifier](https://github.com/maoserr/epublifier) | Converts some webnovels to epub format. | `extension` `epub` `Free` |
 
 
 ### Video & Podcast
@@ -87,6 +94,6 @@ Click the categories below to filter tools by type:
 | [MicroK8s and ngrok: easy ingress at the edge](https://www.cncf.io/blog/2024/10/16/microk8s-and-ngrok-easy-ingress-at-the-edge/) | 
 | [How to Self-host a Container Registry](https://www.freecodecamp.org/news/how-to-self-host-a-container-registry/) | 
 | [System Design Netflix  A Complete Architecture](https://www.geeksforgeeks.org/system-design-netflix-a-complete-architecture/) | 
-
-
-
+| [Designing and testing a highly available Kafka cluster on Kubernetes](https://learnk8s.io/kafka-ha-kubernetes) | 
+| [How to Self-host a Container Registry](https://www.freecodecamp.org/news/how-to-self-host-a-container-registry) | 
+| [First eBPF program](https://prateek-singh.hashnode.dev/first-ebpf-program) | 
