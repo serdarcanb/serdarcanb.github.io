@@ -18,7 +18,7 @@ function Main() {
           <div className="social_icons">
             <a href="https://github.com/serdarcanb" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/serdarcanbuyukdereli/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-            <a href="https://serdarcanb.github.io/" target="_blank" rel="noreferrer"><WebIcon/></a>
+            <a href="https://blog.serdarcanb.dev/" target="_blank" rel="noreferrer"><WebIcon/></a>
           </div>
           <h1>Serdarcan Büyükdereli</h1>
           <p>Senior DevOps & Cloud Engineer</p>
@@ -26,7 +26,7 @@ function Main() {
           <div className="mobile_social_icons">
             <a href="https://github.com/serdarcanb" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/serdarcanbuyukdereli/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
-            <a href="https://serdarcanb.github.io/" target="_blank" rel="noreferrer"><WebIcon/></a>
+            <a href="https://blog.serdarcanb.dev/" target="_blank" rel="noreferrer"><WebIcon/></a>
           </div>
         </div>
       </div>
