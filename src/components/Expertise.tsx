@@ -5,8 +5,7 @@ import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
 
 const labelsCloud = [
-  "AWS (EKS, ECS, EC2, S3)",
-  "Azure",
+  "AWS",
   "Terraform",
   "Terragrunt",
   "Ansible",
@@ -20,6 +19,8 @@ const labelsContainer = [
   "Helm",
   "Istio",
   "Nexus",
+  "Harbor",
+  "Ceph",
 ];
 
 const labelsMonitoring = [
@@ -28,6 +29,8 @@ const labelsMonitoring = [
   "AlertManager",
   "ELK Stack",
   "Zabbix",
+  "Signoz",
+  "Jaeger",
 ];
 
 const labelsDevOps = [
@@ -37,15 +40,17 @@ const labelsDevOps = [
   "CodePipeline",
   "CodeBuild",
   "Jenkins",
-  "Harbor",
+  "Sonarqube",
 ];
 
 const labelsSecurity = [
   "IAM",
   "Keycloak",
-  "AWS Lambda",
   "Security Groups",
   "SSL/TLS",
+  "Vault",
+  "AWS Cost Explorer",
+  "Passbolt",
 ];
 
 function Expertise() {
@@ -59,7 +64,11 @@ function Expertise() {
           <div className="skill">
             <FontAwesomeIcon icon={faAws} size="3x" />
             <h3>Cloud Infrastructure Design & Management</h3>
-            <p>I specialize in designing and managing scalable and reliable cloud infrastructures using AWS, Azure, and Terraform. By leveraging Ansible and GitOps workflows, I ensure efficient and automated infrastructure deployment.</p>
+            <p>
+              Expert in designing robust cloud infrastructures using AWS, Terraform, and Terragrunt. 
+              By leveraging Ansible for configuration management and GitOps workflows, I ensure 
+              automated, scalable, and reliable infrastructure deployments that meet modern business needs.
+            </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
               {labelsCloud.map((label, index) => (
@@ -72,7 +81,11 @@ function Expertise() {
           <div className="skill">
             <FontAwesomeIcon icon={faDocker} size="3x" />
             <h3>Containerization & Orchestration</h3>
-            <p>I have built containerized architectures using Docker and Kubernetes for modern applications. By integrating CI/CD pipelines, I optimize application deployments and scalability.</p>
+            <p>
+              Proficient in building and orchestrating containerized architectures using Docker and Kubernetes. 
+              With tools like Istio, Helm, and Harbor, I ensure seamless container deployment and registry management. 
+              Ceph provides scalable and efficient storage solutions for high-demand systems.
+            </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
               {labelsContainer.map((label, index) => (
@@ -85,7 +98,11 @@ function Expertise() {
           <div className="skill">
             <FontAwesomeIcon icon={faGitAlt} size="3x" />
             <h3>Monitoring & Observability</h3>
-            <p>By utilizing tools like Prometheus, ELK Stack, and Zabbix, I enhance system observability and performance monitoring. I have implemented alarms and notification systems to facilitate swift team responses.</p>
+            <p>
+              Skilled in implementing monitoring and observability tools like Prometheus, Grafana, and ELK Stack. 
+              Leveraging Signoz and Jaeger for distributed tracing ensures optimized performance and real-time insights. 
+              I design proactive alarm systems to support teams with efficient incident resolution.
+            </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
               {labelsMonitoring.map((label, index) => (
@@ -98,7 +115,11 @@ function Expertise() {
           <div className="skill">
             <FontAwesomeIcon icon={faGitAlt} size="3x" />
             <h3>DevOps Pipelines & CI/CD</h3>
-            <p>I have integrated CI/CD processes with GitLab and GitHub Actions, streamlining application releases. Additionally, I used Harbor to create private Docker registries, enhancing security and efficiency.</p>
+            <p>
+              Expertise in integrating CI/CD pipelines using GitLab CI/CD, Jenkins, and GitHub Actions. 
+              I enhance code quality with tools like Sonarqube and ensure secure container registries with Harbor. 
+              These pipelines enable faster, reliable, and secure deployments.
+            </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
               {labelsDevOps.map((label, index) => (
@@ -111,7 +132,11 @@ function Expertise() {
           <div className="skill">
             <FontAwesomeIcon icon={faAws} size="3x" />
             <h3>Security & Cost Optimization</h3>
-            <p>I have developed IAM policies, Keycloak configurations, and security policies to enhance system security. Using AWS Lambda, I created solutions for resource tagging and cost management.</p>
+            <p>
+              Specialized in security enhancements with IAM, Keycloak, and Vault. 
+              I create cost-efficient solutions with AWS Cost Explorer and Passbolt for credential management, 
+              ensuring robust security measures and streamlined cost optimization processes.
+            </p>
             <div className="flex-chips">
               <span className="chip-title">Tech stack:</span>
               {labelsSecurity.map((label, index) => (

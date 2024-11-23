@@ -3,7 +3,6 @@ import {
   Main,
   Timeline,
   Expertise,
-  Contact,
   Navigation,
   Footer,
 } from "./components";
@@ -32,7 +31,6 @@ function App() {
             <Main/>
             <Expertise/>
             <Timeline/>
-            <Contact/>
         </FadeIn>
         <Footer />
     </div>

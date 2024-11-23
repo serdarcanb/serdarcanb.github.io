@@ -23,12 +23,11 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">arabam.com</h3>
             <h4 className="vertical-timeline-element-subtitle">Senior DevOps Engineer</h4>
             <ul>
-              <li>Docker, Kubernetes, Helm, Ansible, Terraform, Keycloak integration and management.</li>
+              <li>Docker, Kubernetes, Helm, Ansible, Terraform, Keycloak, Vault, Minio integration and management.</li>
               <li>GitOps integration and management.</li>
               <li>PostgreSQL, Kafka, Redis integration and management.</li>
               <li>Prometheus with Consul integration and management.</li>
               <li>CI/CD pipelines design and management.</li>
-              <li>MinIO setup and management.</li>
               <li>Project Management and Business Development.</li>
             </ul>
           </VerticalTimelineElement>
