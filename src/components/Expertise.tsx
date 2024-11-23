@@ -4,6 +4,8 @@ import { faAws, faDocker, faGitAlt } from "@fortawesome/free-brands-svg-icons";
 import { faCloud } from '@fortawesome/free-solid-svg-icons';
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
+import { ReactComponent as KubernetesLogo } from "../assets/images/k8s.svg";
+
 
 const labelsCloud = [
   "AWS",
@@ -80,7 +82,7 @@ function Expertise() {
 
           {/* Containerization */}
           <div className="skill">
-            <FontAwesomeIcon icon={faDocker} size="3x" />
+            <KubernetesLogo width="60" height="60" />
             <h3>Containerization & Orchestration</h3>
             <p>
               Proficient in building and orchestrating containerized architectures using Docker and Kubernetes. 
