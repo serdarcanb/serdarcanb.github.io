@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAws, faDocker, faGitAlt, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faAws, faDocker, faGitAlt } from "@fortawesome/free-brands-svg-icons";
+import { faCloud } from '@fortawesome/free-solid-svg-icons';
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
 
@@ -62,7 +63,7 @@ function Expertise() {
 
           {/* Cloud Infrastructure */}
           <div className="skill">
-            <FontAwesomeIcon icon={faAws} size="3x" />
+            <FontAwesomeIcon icon={faCloud} size="3x" />
             <h3>Cloud Infrastructure Design & Management</h3>
             <p>
               Expert in designing robust cloud infrastructures using AWS, Terraform, and Terragrunt. 
