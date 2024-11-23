@@ -2,6 +2,7 @@ import React from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WebIcon from '@mui/icons-material/Web';
+import myImage from '../assets/images/photo.png'; // Adjust the path as necessary
 
 import '../assets/styles/Main.scss';
 
@@ -11,7 +12,7 @@ function Main() {
     <div className="container">
       <div className="about-section">
         <div className="image-wrapper">
-          <img src="https://serdarcanb.github.io/assets/images/my.png" alt="Avatar" />
+          <img src={myImage} alt="Avatar" />
         </div>
         <div className="content">
           <div className="social_icons">
