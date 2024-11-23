@@ -2,7 +2,7 @@ import React from "react";
 import '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss'
 
@@ -22,15 +22,15 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">arabam.com</h3>
             <h4 className="vertical-timeline-element-subtitle">Senior DevOps Engineer</h4>
-            <p>
-            • Docker, Kubernetes, Helm, Ansible, Terraform, Keycloak integration and management.<br />
-            • GitOps integration and management.<br />
-            • PostgreSQL, Kafka, Redis integration and management.<br />
-            • Prometheus with Consul integration and management.<br />
-            • CI/CD pipelines design and management.<br />
-            • MinIO setup and management.<br />
-            • Project Management and Business Development.
-            </p>
+            <ul>
+              <li>Docker, Kubernetes, Helm, Ansible, Terraform, Keycloak integration and management.</li>
+              <li>GitOps integration and management.</li>
+              <li>PostgreSQL, Kafka, Redis integration and management.</li>
+              <li>Prometheus with Consul integration and management.</li>
+              <li>CI/CD pipelines design and management.</li>
+              <li>MinIO setup and management.</li>
+              <li>Project Management and Business Development.</li>
+            </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -40,12 +40,12 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">Insider</h3>
             <h4 className="vertical-timeline-element-subtitle">DevOps Engineer</h4>
-            <p>
-            • AWS(EC2,ECS,S3,ACM,EB,Lambda,EKS,Route53,CloudWatch) integration and management.
-            • EKS Cluster, Helm integration and management.
-            • Migrate from Elastic Beanstalk to AWS ECS
-            • AWS Terraform, Terragrunt integration and management.            
-            </p>
+            <ul>
+              <li>AWS (EC2, ECS, S3, ACM, EB, Lambda, EKS, Route53, CloudWatch) integration and management.</li>
+              <li>EKS Cluster, Helm integration and management.</li>
+              <li>Migrated from Elastic Beanstalk to AWS ECS.</li>
+              <li>AWS Terraform, Terragrunt integration and management.</li>
+            </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -55,13 +55,13 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">BİTES - Defense & Aerospace Technologies</h3>
             <h4 className="vertical-timeline-element-subtitle">DevOps Engineer</h4>
-            <p>
-            • Docker, Kubernetes, Helm, Ansible, Envoy integration and management.
-            • AWS(EC2,ECS,S3,ACM,CloudFront,Route53,CloudWatch) integration and management.
-            • DigitalOcean Kubernetes Cluster integration and management.
-            • Postgresql, Minio, Redis integration and management.
-            • Zabbix integration and management.
-            </p>
+            <ul>
+              <li>Docker, Kubernetes, Helm, Ansible, Envoy integration and management.</li>
+              <li>AWS (EC2, ECS, S3, ACM, CloudFront, Route53, CloudWatch) integration and management.</li>
+              <li>DigitalOcean Kubernetes Cluster integration and management.</li>
+              <li>PostgreSQL, Minio, Redis integration and management.</li>
+              <li>Zabbix integration and management.</li>
+            </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -71,11 +71,11 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">TURK AI</h3>
             <h4 className="vertical-timeline-element-subtitle">DevOps Engineer</h4>
-            <p>
-            • Docker, Kubernetes, Gitlab CI/CD , Istio Gateway ,Nexus integration and management.
-            • Microservice integration and management.
-            • Postgresql, Minio, Redis, Rabbitmq integration and management.
-            </p>
+            <ul>
+              <li>Docker, Kubernetes, GitLab CI/CD, Istio Gateway, Nexus integration and management.</li>
+              <li>Microservice integration and management.</li>
+              <li>PostgreSQL, Minio, Redis, RabbitMQ integration and management.</li>
+            </ul>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -85,15 +85,15 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">Netgsm Communication and Information Technologies Inc</h3>
             <h4 className="vertical-timeline-element-subtitle">DevOps Engineer</h4>
-            <p>
-            • Proxmox,Vmware, KVM integration and management.
-            • Router,Switch integration and management.
-            • Firewall, Mail Server integration and management.
-            • Docker, Kubernetes, Gitlab CI/CD integration and management.
-            • Microservice architecture integration .
-            • Prometheus , ELK stack integration and management.
-            • Bash, Python scripting.
-            </p>
+            <ul>
+              <li>Proxmox, VMware, KVM integration and management.</li>
+              <li>Router, Switch integration and management.</li>
+              <li>Firewall, Mail Server integration and management.</li>
+              <li>Docker, Kubernetes, GitLab CI/CD integration and management.</li>
+              <li>Microservice architecture integration.</li>
+              <li>Prometheus, ELK stack integration and management.</li>
+              <li>Bash, Python scripting.</li>
+            </ul>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
