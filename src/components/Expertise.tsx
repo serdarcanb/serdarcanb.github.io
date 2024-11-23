@@ -1,10 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAws, faDocker, faGitAlt } from "@fortawesome/free-brands-svg-icons";
-import { faCloud } from '@fortawesome/free-solid-svg-icons';
+import {  faGitAlt } from "@fortawesome/free-brands-svg-icons";
+import { faCloud, faTv, faShieldHalved } from '@fortawesome/free-solid-svg-icons';
 import Chip from "@mui/material/Chip";
 import "../assets/styles/Expertise.scss";
 import { ReactComponent as KubernetesLogo } from "../assets/images/k8s.svg";
+import { ReactComponent as DevOpsLogo } from "../assets/images/devops.svg";
 
 
 const labelsCloud = [
@@ -99,7 +100,7 @@ function Expertise() {
 
           {/* Monitoring */}
           <div className="skill">
-            <FontAwesomeIcon icon={faGitAlt} size="3x" />
+            <FontAwesomeIcon icon={faTv} size="3x" />
             <h3>Monitoring & Observability</h3>
             <p>
               Skilled in implementing monitoring and observability tools like Prometheus, Grafana, and ELK Stack. 
@@ -116,7 +117,7 @@ function Expertise() {
 
           {/* DevOps */}
           <div className="skill">
-            <FontAwesomeIcon icon={faGitAlt} size="3x" />
+            <DevOpsLogo width="60" height="60" />
             <h3>DevOps Pipelines & CI/CD</h3>
             <p>
               Expertise in integrating CI/CD pipelines using GitLab CI/CD, Jenkins, and GitHub Actions. 
@@ -133,7 +134,7 @@ function Expertise() {
 
           {/* Security */}
           <div className="skill">
-            <FontAwesomeIcon icon={faAws} size="3x" />
+            <FontAwesomeIcon icon={faShieldHalved} size="3x" />
             <h3>Security & Cost Optimization</h3>
             <p>
               Specialized in security enhancements with IAM, Keycloak, and Vault. 
