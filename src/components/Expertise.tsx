@@ -120,7 +120,7 @@ function Expertise() {
             <DevOpsLogo width="60" height="60" />
             <h3>DevOps Pipelines & CI/CD</h3>
             <p>
-              Expertise in integrating CI/CD pipelines using GitLab CI/CD, Jenkins, and GitHub Actions. 
+              Expertise in integrating CI/CD pipelines using GitLab CI/CD, Jenkins, and Git Actions. 
               I enhance code quality with tools like Sonarqube and ensure secure container registries with Harbor. 
               These pipelines enable faster, reliable, and secure deployments.
             </p>
