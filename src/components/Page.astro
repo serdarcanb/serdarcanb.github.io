@@ -1,0 +1,441 @@
+---
+import { Image } from "astro:assets";
+import Base from "../layouts/Base.astro";
+import Icon from "./Icon.astro";
+import portrait from "../assets/portrait.jpg";
+import infinityShot from "../assets/theinfinity.png";
+import { content, locales, site, googleInvite, outlookInvite, type Lang } from "../i18n";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = content[lang];
+
+const navLinks = [
+  { href: "#work", label: t.nav.work },
+  { href: "#experience", label: t.nav.experience },
+  { href: "#projects", label: t.nav.projects },
+  { href: "#skills", label: t.nav.skills },
+  { href: "#contact", label: t.nav.contact },
+];
+
+const LEAD_BULLETS = 3;
+const COLLAPSE_FROM = 5;
+const kindLabel: Record<string, string> = t.projects.kinds;
+const wide = "max-w-6xl mx-auto px-5 md:px-8";
+---
+
+<Base t={t}>
+  <header class="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur-md">
+    <div class:list={[wide, "flex h-16 items-center justify-between gap-4"]}>
+      <a href={t.path} class="font-medium tracking-tight whitespace-nowrap">{site.name}</a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-[15px] text-muted" aria-label={t.nav.menu}>
+        {navLinks.map((l) => <a href={l.href} class="transition-colors hover:text-ink">{l.label}</a>)}
+      </nav>
+
+      <div class="flex items-center gap-1.5">
+        <div class="flex items-center rounded-full border border-line p-0.5 text-[13px] font-medium" role="group" aria-label={t.nav.language}>
+          {
+            locales.map((l) => (
+              <a
+                href={l.path}
+                hreflang={l.lang}
+                lang={l.lang}
+                title={l.name}
+                aria-current={l.lang === lang ? "true" : undefined}
+                class:list={[
+                  "rounded-full px-2.5 py-1 transition-colors",
+                  l.lang === lang ? "bg-ink text-on-ink" : "text-muted hover:text-ink",
+                ]}
+              >
+                {l.label}
+              </a>
+            ))
+          }
+        </div>
+
+        <button type="button" data-theme-toggle aria-label={t.nav.theme} title={t.nav.theme} class="grid size-9 place-items-center rounded-full text-[18px] text-muted transition-colors hover:text-ink">
+          <Icon name="moon" class="dark:hidden" />
+          <Icon name="sun" class="hidden dark:inline-flex" />
+        </button>
+
+        <details class="relative lg:hidden" data-menu>
+          <summary aria-label={t.nav.menu} class="grid size-9 place-items-center rounded-full text-[20px] text-muted hover:text-ink">
+            <Icon name="list" />
+          </summary>
+          <nav class="absolute right-0 top-11 z-50 w-52 rounded-2xl border border-line bg-surface p-2 shadow-lg shadow-black/5" aria-label={t.nav.menu}>
+            {navLinks.map((l) => <a href={l.href} class="block rounded-xl px-3 py-2.5 text-[15px] hover:bg-surface-2">{l.label}</a>)}
+          </nav>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class:list={[wide, "pt-12 pb-14 md:pt-20 md:pb-20"]}>
+      <div class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+        <div class="lg:col-span-8">
+          <p class="hero-in text-[15px] font-medium text-accent" style="--i:0">{t.hero.role}</p>
+          <h1 class="hero-in mt-4 text-[2rem] font-semibold leading-[1.1] tracking-tight text-balance sm:text-4xl md:text-5xl md:leading-[1.08]" style="--i:1">
+            {t.hero.headline}
+          </h1>
+          <p class="hero-in mt-6 max-w-[54ch] text-lg leading-relaxed text-muted" style="--i:2">{t.hero.sub}</p>
+          <div class="hero-in mt-8 flex flex-wrap items-center gap-3" style="--i:3">
+            <a href="#contact" class="btn btn-primary">
+              <Icon name="calendar" class="text-[18px]" />
+              {t.hero.primary}
+            </a>
+            <a href="#work" class="btn btn-ghost">
+              {t.hero.secondary}
+              <Icon name="arrowRight" class="text-[16px]" />
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-in lg:col-span-4" style="--i:2">
+          <div class="relative mx-auto aspect-square w-full max-w-[280px] overflow-hidden rounded-2xl border border-line bg-surface-2 lg:ml-auto lg:mr-0 lg:max-w-[320px]">
+            <Image
+              src={portrait}
+              alt={t.hero.photoAlt}
+              widths={[320, 460]}
+              sizes="(min-width: 1024px) 320px, 280px"
+              format="webp"
+              quality={90}
+              loading="eager"
+              fetchpriority="high"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class:list={[wide, "py-16 md:py-24"]}>
+      <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">{t.about.title}</h2>
+      <div class="reveal mt-6 max-w-[68ch] space-y-5 text-[17px] leading-relaxed text-muted">
+        {t.about.paragraphs.map((p, i) => <p class:list={[i === 0 && "text-ink"]}>{p}</p>)}
+      </div>
+    </section>
+
+    <section id="work" class="border-y border-line bg-surface">
+      <div class:list={[wide, "py-16 md:py-24"]}>
+        <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">{t.areas.title}</h2>
+        <p class="mt-3 max-w-[62ch] text-muted">{t.areas.intro}</p>
+
+        <div class="mt-10 grid gap-6 lg:grid-cols-12 lg:gap-10" data-tabs>
+          <div class="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 lg:col-span-4 lg:mx-0 lg:flex-col lg:gap-1 lg:overflow-visible lg:px-0" role="tablist" aria-label={t.areas.title}>
+            {
+              t.areas.items.map((a, i) => (
+                <button
+                  type="button"
+                  role="tab"
+                  id={`tab-${a.id}`}
+                  aria-controls={`panel-${a.id}`}
+                  aria-selected={i === 0 ? "true" : "false"}
+                  tabindex={i === 0 ? 0 : -1}
+                  class="group flex shrink-0 items-center gap-3 rounded-full border border-line px-4 py-2.5 text-left text-[15px] text-muted transition-colors hover:text-ink aria-selected:border-ink aria-selected:bg-ink aria-selected:text-on-ink lg:rounded-2xl lg:border-transparent lg:px-4 lg:py-3 lg:aria-selected:border-line lg:aria-selected:bg-bg lg:aria-selected:text-ink"
+                >
+                  <Icon name={a.icon} class="text-[18px] lg:text-[20px] lg:group-aria-selected:text-accent" />
+                  <span class="whitespace-nowrap font-medium lg:whitespace-normal">{a.title}</span>
+                  <span class="ml-auto hidden font-mono text-xs tabular-nums text-muted lg:inline">{a.points.length}</span>
+                </button>
+              ))
+            }
+          </div>
+
+          <div class="lg:col-span-8">
+            {
+              t.areas.items.map((a) => (
+                <div role="tabpanel" id={`panel-${a.id}`} aria-labelledby={`tab-${a.id}`} tabindex="0" class="mb-8 last:mb-0 rounded-2xl">
+                  <h3 class="text-xl font-semibold tracking-tight">{a.title}</h3>
+                  <p class="mt-2 text-muted">{a.summary}</p>
+                  <ul class="mt-6 space-y-5">
+                    {a.points.map((p) => (
+                      <li class="grid gap-1 border-l-2 border-line pl-5 sm:grid-cols-[1fr_auto] sm:gap-6">
+                        <p class="max-w-[62ch] leading-relaxed">{p.text}</p>
+                        <p class="font-mono text-xs text-muted sm:pt-1.5 sm:text-right">{p.at}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class:list={[wide, "py-16 md:py-24"]}>
+      <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">{t.experience.title}</h2>
+      <div class="mt-10">
+        {
+          t.experience.items.map((job) => {
+            const collapse = job.bullets.length > COLLAPSE_FROM;
+            const lead = collapse ? job.bullets.slice(0, LEAD_BULLETS) : job.bullets;
+            const rest = collapse ? job.bullets.slice(LEAD_BULLETS) : [];
+            return (
+              <article class="reveal grid gap-3 border-t border-line py-9 md:grid-cols-12 md:gap-8">
+                <div class="md:col-span-4">
+                  <p class="font-mono text-sm text-muted">{job.period}</p>
+                  <p class="mt-1 text-sm text-muted">{job.place}</p>
+                </div>
+                <div class="md:col-span-8">
+                  <h3 class="text-xl font-semibold tracking-tight">{job.company}</h3>
+                  <p class="mt-1 text-accent">{job.role}</p>
+                  {job.note && <p class="mt-3 max-w-[64ch] text-[15px] leading-relaxed text-muted">{job.note}</p>}
+                  <ul class="mt-5 list-disc space-y-3 pl-5 leading-relaxed marker:text-muted">
+                    {lead.map((b) => <li class="max-w-[66ch] pl-1">{b}</li>)}
+                  </ul>
+                  {rest.length > 0 && (
+                    <details class="mt-4">
+                      <summary class="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-medium text-muted transition-colors hover:border-ink hover:text-ink">
+                        <span class="when-closed">{t.experience.more.replace("{n}", String(job.bullets.length))}</span>
+                        <span class="when-open">{t.experience.less}</span>
+                        <Icon name="caretDown" class="rotate-on-open text-[14px] transition-transform" />
+                      </summary>
+                      <ul class="mt-5 list-disc space-y-3 pl-5 leading-relaxed marker:text-muted">
+                        {rest.map((b) => <li class="max-w-[66ch] pl-1">{b}</li>)}
+                      </ul>
+                    </details>
+                  )}
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <section id="projects" class="border-y border-line bg-surface">
+      <div class:list={[wide, "py-16 md:py-24"]} data-filter>
+        <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">{t.projects.title}</h2>
+        <p class="mt-3 max-w-[62ch] text-muted">{t.projects.intro}</p>
+
+        <div class="no-scrollbar -mx-5 mt-8 flex gap-2 overflow-x-auto px-5 md:mx-0 md:flex-wrap md:px-0" role="group" aria-label={t.projects.title}>
+          {
+            (["all", "work", "past", "side", "open"] as const).map((k) => (
+              <button
+                type="button"
+                data-filter-value={k}
+                aria-pressed={k === "all" ? "true" : "false"}
+                class="shrink-0 rounded-full border border-line px-4 py-2 text-sm font-medium text-muted transition-colors hover:text-ink aria-pressed:border-ink aria-pressed:bg-ink aria-pressed:text-on-ink"
+              >
+                {t.projects.filters[k]}
+                <span class="ml-1.5 font-mono text-xs">
+                  {k === "all" ? t.projects.items.length : t.projects.items.filter((p) => p.kind === k).length}
+                </span>
+              </button>
+            ))
+          }
+        </div>
+
+        <div class="mt-8 grid gap-4 md:grid-cols-6">
+          {
+            t.projects.items.map((p, i) => {
+              const featured = i === 0;
+              const hasShot = p.name === "theinfinity.dev";
+              const long = p.text.length > 2;
+              const span = featured || hasShot || long ? "md:col-span-6" : p.kind === "open" ? "md:col-span-2" : "md:col-span-3";
+              const tone = featured ? "bg-accent-soft border-transparent" : p.kind === "side" ? "bg-surface-2 border-transparent" : "bg-bg border-line";
+              return (
+                <article data-kind={p.kind} class:list={["rounded-2xl border p-6 md:p-7", span, tone, hasShot && "grid gap-6 md:grid-cols-2 md:items-center"]}>
+                  <div>
+                    <p class="text-sm text-muted">{p.org || kindLabel[p.kind]}</p>
+                    <h3 class:list={["mt-2 font-semibold tracking-tight", featured ? "text-2xl" : "text-lg"]}>{p.name}</h3>
+                    <div class:list={["mt-3 space-y-3 text-[15px] leading-relaxed text-muted", (featured || long) && "md:columns-2 md:gap-8 md:space-y-0 [&>p]:break-inside-avoid md:[&>p]:mb-3"]}>
+                      {p.text.map((para) => <p>{para}</p>)}
+                    </div>
+                    {p.url && (
+                      <a href={p.url} target="_blank" rel="noopener" class="link mt-4 inline-flex items-center gap-1.5 text-[15px] font-medium">
+                        {t.projects.visit}
+                        <Icon name="arrowUpRight" class="text-[14px]" />
+                      </a>
+                    )}
+                  </div>
+                  {hasShot && (
+                    <a href={p.url} target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" class="block overflow-hidden rounded-xl border border-line">
+                      <Image src={infinityShot} alt="" widths={[640, 1280]} sizes="(min-width: 768px) 520px, 100vw" format="webp" loading="lazy" class="block w-full" />
+                    </a>
+                  )}
+                </article>
+              );
+            })
+          }
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class:list={[wide, "py-16 md:py-24"]}>
+      <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">{t.skills.title}</h2>
+      <dl class="mt-10 gap-x-14 md:columns-2">
+        {
+          t.skills.groups.map((g) => (
+            <div class="mb-8 break-inside-avoid">
+              <dt class="font-medium">{g.label}</dt>
+              <dd class="mt-1.5 max-w-[60ch] text-[15px] leading-relaxed text-muted">{g.items}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section id="credentials" class="border-t border-line">
+      <div class:list={[wide, "grid gap-12 py-16 md:py-24 lg:grid-cols-12"]}>
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">{t.credentials.title}</h2>
+          <h3 class="mt-10 text-sm text-muted">{t.credentials.certsTitle}</h3>
+          <ul class="mt-4 space-y-5">
+            {
+              t.credentials.certs.map((c) => (
+                <li>
+                  <p class="font-medium">{c.name}</p>
+                  <p class="mt-1 flex flex-wrap items-baseline gap-x-4 gap-y-1 text-sm text-muted">
+                    <span class="font-mono text-[13px]">{c.when}</span>
+                    {c.url && (
+                      <a href={c.url} target="_blank" rel="noopener" class="link inline-flex items-center gap-1">
+                        {t.credentials.verify}
+                        <Icon name="arrowUpRight" class="text-[12px]" />
+                      </a>
+                    )}
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div class="space-y-10 lg:col-span-5 lg:pt-[4.75rem]">
+          <div>
+            <h3 class="text-sm text-muted">{t.credentials.educationTitle}</h3>
+            <p class="mt-4 font-medium">{t.credentials.education.school}</p>
+            <p class="mt-1 text-muted">{t.credentials.education.degree}</p>
+            <p class="mt-1 font-mono text-[13px] text-muted">{t.credentials.education.period}</p>
+          </div>
+          <div>
+            <h3 class="text-sm text-muted">{t.credentials.languagesTitle}</h3>
+            <ul class="mt-4 space-y-2">
+              {t.credentials.languages.map((l) => (
+                <li><span class="font-medium">{l.name}</span><span class="text-muted">, {l.level}</span></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm text-muted">{t.credentials.interestsTitle}</h3>
+            <ul class="mt-4 space-y-2">
+              {t.credentials.interests.map((x) => <li>{x}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class:list={[wide, "pb-16 md:pb-24"]}>
+      <div class="reveal rounded-2xl bg-accent-soft p-7 md:p-12">
+        <h2 class="text-3xl font-semibold tracking-tight md:text-4xl">{t.contact.title}</h2>
+        <p class="mt-4 max-w-[58ch] text-lg leading-relaxed text-muted">{t.contact.text}</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href={googleInvite(t)} target="_blank" rel="noopener" class="btn btn-primary">
+            <Icon name="calendar" class="text-[18px]" />
+            {t.contact.google}
+          </a>
+          <a href={outlookInvite(t)} target="_blank" rel="noopener" class="btn btn-ghost" style="border-color: color-mix(in srgb, var(--ink) 30%, transparent)">
+            <Icon name="calendar" class="text-[18px]" />
+            {t.contact.outlook}
+          </a>
+        </div>
+        <ul class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-[15px]">
+          <li>
+            <a href={`mailto:${site.email}`} class="link inline-flex items-center gap-2">
+              <Icon name="envelope" class="text-[18px]" />
+              {site.email}
+            </a>
+          </li>
+          <li>
+            <a href={site.linkedin} target="_blank" rel="noopener me" class="link inline-flex items-center gap-2">
+              <Icon name="linkedin" class="text-[18px]" />
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href={site.github} target="_blank" rel="noopener me" class="link inline-flex items-center gap-2">
+              <Icon name="github" class="text-[18px]" />
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href={site.medium} target="_blank" rel="noopener me" class="link inline-flex items-center gap-2">
+              <Icon name="medium" class="text-[18px]" />
+              Medium
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-line">
+    <div class:list={[wide, "flex flex-wrap items-center justify-between gap-4 py-8 text-sm text-muted"]}>
+      <p>&copy; {new Date().getFullYear()} {site.name}. {t.footer.rights}</p>
+      <p>{t.contact.location}</p>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle. The initial theme is set inline in <head> to avoid a flash.
+    document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
+      const root = document.documentElement;
+      const next = root.dataset.theme === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      try {
+        localStorage.setItem("theme", next);
+      } catch {}
+    });
+
+    // Close the mobile menu after picking a link.
+    document.querySelectorAll<HTMLDetailsElement>("[data-menu]").forEach((menu) => {
+      menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => (menu.open = false)));
+    });
+
+    // Work areas: tabs. Without JS every panel stays visible, one under the other.
+    document.querySelectorAll<HTMLElement>("[data-tabs]").forEach((root) => {
+      const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+      const panels = Array.from(root.querySelectorAll<HTMLElement>('[role="tabpanel"]'));
+      const select = (index: number, focus = false) => {
+        tabs.forEach((tab, i) => {
+          const on = i === index;
+          tab.setAttribute("aria-selected", String(on));
+          tab.tabIndex = on ? 0 : -1;
+          panels[i].hidden = !on;
+        });
+        if (focus) tabs[index].focus();
+        tabs[index].scrollIntoView({ block: "nearest", inline: "nearest" });
+      };
+      tabs.forEach((tab, i) => {
+        tab.addEventListener("click", () => select(i));
+        tab.addEventListener("keydown", (e) => {
+          const step = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+          if (!step) return;
+          e.preventDefault();
+          select((i + step + tabs.length) % tabs.length, true);
+        });
+      });
+      panels.forEach((panel, i) => (panel.hidden = i !== 0));
+    });
+
+    // Projects: filter by kind.
+    document.querySelectorAll<HTMLElement>("[data-filter]").forEach((root) => {
+      const buttons = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-filter-value]"));
+      const cards = Array.from(root.querySelectorAll<HTMLElement>("[data-kind]"));
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const value = button.dataset.filterValue;
+          buttons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
+          cards.forEach((card) => (card.hidden = value !== "all" && card.dataset.kind !== value));
+        });
+      });
+    });
+  </script>
+</Base>

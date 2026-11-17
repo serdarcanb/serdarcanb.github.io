@@ -1,0 +1,77 @@
+---
+import "../styles/global.css";
+import { locales, site, type Lang } from "../i18n";
+import type { Content } from "../i18n/en";
+
+interface Props {
+  t: Content;
+}
+const { t } = Astro.props;
+const lang = t.lang as Lang;
+const canonical = new URL(t.path, site.url).href;
+const ogImage = new URL("/og.png", site.url).href;
+const ogLocale = { en: "en_US", tr: "tr_TR", es: "es_ES" }[lang];
+
+const person = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: t.hero.role,
+  url: canonical,
+  image: ogImage,
+  email: `mailto:${site.email}`,
+  address: { "@type": "PostalAddress", addressLocality: "Ankara", addressCountry: "TR" },
+  worksFor: { "@type": "Organization", name: "LimonCloud" },
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Süleyman Demirel University" },
+  knowsLanguage: ["tr", "en"],
+  sameAs: [site.linkedin, site.github, site.medium, "https://theinfinity.dev"],
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t.meta.title}</title>
+    <meta name="description" content={t.meta.description} />
+    <meta name="author" content={site.name} />
+    <link rel="canonical" href={canonical} />
+    {locales.map((l) => <link rel="alternate" hreflang={l.lang} href={new URL(l.path, site.url).href} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL("/", site.url).href} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b1017" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={t.meta.title} />
+    <meta name="twitter:description" content={t.meta.description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(person)} />
+
+    <script is:inline>
+      (function () {
+        var theme = "light";
+        try {
+          theme =
+            localStorage.getItem("theme") ||
+            (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        } catch (e) {}
+        document.documentElement.dataset.theme = theme;
+      })();
+    </script>
+  </head>
+  <body class="min-h-[100dvh] antialiased">
+    <slot />
+  </body>
+</html>

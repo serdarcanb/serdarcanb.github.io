@@ -1,0 +1,45 @@
+<!doctype html>
+<!-- Source for public/og.png (1200x630). Open in a 1200x630 viewport and take a screenshot. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("../node_modules/@fontsource-variable/geist/files/geist-latin-wght-normal.woff2") format("woff2");
+        font-weight: 100 900;
+      }
+      @font-face {
+        font-family: "Geist";
+        src: url("../node_modules/@fontsource-variable/geist/files/geist-latin-ext-wght-normal.woff2") format("woff2");
+        font-weight: 100 900;
+        unicode-range: U+0100-02BA, U+1E00-1EFF;
+      }
+      * { margin: 0; box-sizing: border-box; }
+      body {
+        width: 1200px; height: 630px; overflow: hidden;
+        font-family: "Geist", system-ui, sans-serif;
+        background: #0b1017; color: #e6eaf0;
+        display: grid; grid-template-columns: 1fr 380px;
+      }
+      .text { padding: 72px 0 72px 80px; display: flex; flex-direction: column; justify-content: space-between; }
+      .role { font-size: 26px; color: #7aa7ff; }
+      h1 { font-size: 68px; line-height: 1.06; letter-spacing: -0.03em; font-weight: 600; margin-top: 18px; }
+      p { font-size: 28px; line-height: 1.4; color: #97a3b4; max-width: 620px; }
+      .url { font-size: 24px; color: #97a3b4; }
+      .photo { display: grid; place-items: center; background: #111823; border-left: 1px solid #232d3b; }
+      .photo img { width: 280px; height: 280px; border-radius: 28px; object-fit: cover; }
+    </style>
+  </head>
+  <body>
+    <div class="text">
+      <div>
+        <div class="role">Senior DevOps &amp; Cloud Engineer</div>
+        <h1>Serdarcan Büyükdereli</h1>
+      </div>
+      <p>Production infrastructure on AWS and Kubernetes. Migrations, cost reviews, incident root cause, backup standards.</p>
+      <div class="url">serdarcanb.github.io</div>
+    </div>
+    <div class="photo"><img src="../src/assets/portrait.jpg" alt="" /></div>
+  </body>
+</html>
