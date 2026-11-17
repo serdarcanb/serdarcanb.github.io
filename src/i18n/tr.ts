@@ -150,9 +150,22 @@ export const tr: Content = {
         ],
       },
       {
+        id: "ai",
+        icon: "ai",
+        title: "AI ve LLM işleri",
+        summary: "Günlük operasyonda kullanılan MCP server'lar, agent skill'leri ve retrieval.",
+        points: [
+          { text: "AWS Architecture Studio'nun MCP server'ını yazdım. 14 AI sağlayıcısıyla düz HTTP üzerinden konuşuyor ve yerel model seçeneği var. Tool'ları read-only ve open-world işaretleri taşıyor, uzak modda yerel dosya yolları reddediliyor.", at: "LimonCloud" },
+          { text: "Ekibin müşteri discovery'si, maliyet analizi ve raporlama için kullandığı Claude Code skill'lerini yazdım.", at: "LimonCloud" },
+          { text: "Bir müşteri adayı için iki hedef AWS mimarisi tasarladım. Verinin AB içinde kalması için Amazon Bedrock'un EU inference profile'ı kullanıldı. Teklif aşamasında, uygulanmadı.", at: "LimonCloud" },
+          { text: "EKS üzerinde Apache Superset'in yanına bir MCP server kurdum. Bütün container'ların resource limit'i tanımlı, secret'lar 1Password'den geliyor.", at: "LimonCloud" },
+          { text: "local-rag: kendi notlarım üzerinde tamamen yerelde çalışan bir retrieval pipeline'ı. Qdrant, hibrit retrieval, reranking ve Ollama üzerinden yerel bir Gemma modeli kullanıyor. Değerlendirme setini elle yazdım ve embedding modellerini Türkçe sorgularda karşılaştırdım.", at: "Kişisel proje" },
+        ],
+      },
+      {
         id: "tooling",
         icon: "tooling",
-        title: "İç araçlar ve AI otomasyonu",
+        title: "İç araçlar",
         summary: "Var olan araçlar boşluk bıraktığı için yazdığım araçlar.",
         points: [
           { text: "AWS Architecture Studio: mimari tarifini paylaşılabilir bir calculator.aws estimate'ine ve draw.io diyagramına çeviren bir web uygulaması ve MCP server.", at: "LimonCloud" },

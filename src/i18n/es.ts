@@ -150,9 +150,22 @@ export const es: Content = {
         ],
       },
       {
+        id: "ai",
+        icon: "ai",
+        title: "Trabajo con IA y LLM",
+        summary: "Servidores MCP, agent skills y retrieval, usados en la operación diaria.",
+        points: [
+          { text: "Escribí el servidor MCP de AWS Architecture Studio. Habla con 14 proveedores de IA por HTTP plano y tiene opción de modelo local. Sus tools llevan las marcas read-only y open-world, y el modo remoto rechaza rutas de archivos locales.", at: "LimonCloud" },
+          { text: "Escribí las skills de Claude Code que el equipo usa para discovery de clientes, análisis de costes e informes.", at: "LimonCloud" },
+          { text: "Diseñé dos arquitecturas objetivo en AWS para un cliente potencial, con el EU inference profile de Amazon Bedrock para mantener los datos en la UE. Fase de propuesta, no implementado.", at: "LimonCloud" },
+          { text: "Puse en marcha un servidor MCP en EKS junto a Apache Superset. Todos los contenedores tienen resource limits y los secretos vienen de 1Password.", at: "LimonCloud" },
+          { text: "local-rag: un pipeline de retrieval sobre mis propias notas que funciona totalmente en local, con Qdrant, retrieval híbrido, reranking y un modelo Gemma local a través de Ollama. Escribí a mano un conjunto de evaluación y comparé modelos de embeddings con consultas en turco.", at: "Proyecto personal" },
+        ],
+      },
+      {
         id: "tooling",
         icon: "tooling",
-        title: "Herramientas internas y automatización con IA",
+        title: "Herramientas internas",
         summary: "Herramientas que escribí porque las existentes dejaban un hueco.",
         points: [
           { text: "AWS Architecture Studio: una aplicación web y servidor MCP que convierte la descripción de una arquitectura en una estimación compartible de calculator.aws y un diagrama de draw.io.", at: "LimonCloud" },

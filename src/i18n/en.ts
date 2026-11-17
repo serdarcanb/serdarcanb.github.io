@@ -148,9 +148,22 @@ export const en = {
         ],
       },
       {
+        id: "ai",
+        icon: "ai",
+        title: "AI and LLM work",
+        summary: "MCP servers, agent skills and retrieval, used in day-to-day operations.",
+        points: [
+          { text: "Wrote the MCP server behind AWS Architecture Studio. It talks to 14 AI providers over plain HTTP and has a local-model option. Its tools carry read-only and open-world hints, and remote mode refuses local file paths.", at: "LimonCloud" },
+          { text: "Wrote Claude Code skills that the team uses for customer discovery, cost analysis and reporting.", at: "LimonCloud" },
+          { text: "Designed two target AWS architectures for a prospect, with Amazon Bedrock's EU inference profile to keep data in the EU. Proposal stage, not implemented.", at: "LimonCloud" },
+          { text: "Ran an MCP server on EKS next to Apache Superset. Every container has resource limits and secrets come from 1Password.", at: "LimonCloud" },
+          { text: "local-rag: a retrieval pipeline over my own notes that runs fully on my machine, with Qdrant, hybrid retrieval, reranking and a local Gemma model through Ollama. I wrote an evaluation set by hand and compared embedding models on Turkish queries.", at: "Side project" },
+        ],
+      },
+      {
         id: "tooling",
         icon: "tooling",
-        title: "Internal tools and AI automation",
+        title: "Internal tools",
         summary: "Tools I wrote because the existing ones left a gap.",
         points: [
           { text: "AWS Architecture Studio: a web app and MCP server that turns an architecture description into a shareable calculator.aws estimate and a draw.io diagram.", at: "LimonCloud" },
