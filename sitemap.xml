@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://serdarcanb.github.io/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serdarcanb.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://serdarcanb.github.io/tr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://serdarcanb.github.io/es/"/>
+  </url>
+  <url>
+    <loc>https://serdarcanb.github.io/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serdarcanb.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://serdarcanb.github.io/tr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://serdarcanb.github.io/es/"/>
+  </url>
+  <url>
+    <loc>https://serdarcanb.github.io/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://serdarcanb.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://serdarcanb.github.io/tr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://serdarcanb.github.io/es/"/>
+  </url>
+</urlset>
